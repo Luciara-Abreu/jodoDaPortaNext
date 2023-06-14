@@ -12,12 +12,13 @@ const HeroImage = styled.div`
   }
 
   position: absolute;
-  bottom: ${28 * 1}px;
-  left: ${49 * 0}px;
+  bottom: ${27 * 8}px;
+  left: ${50 * 1}px;
   width: ${48}px;
-  height: 100px;
+  height: 65px;
   background-image: url(/images/hero.png);
   background-repeat: no-repeat;
+  background-position: 0 ${-35}px;
   animation: hero-animation 1s steps(4) infinite;
 `
 
