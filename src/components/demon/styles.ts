@@ -13,11 +13,12 @@ const DemonImage = styled.div`
 
   position: absolute;
   bottom: ${28 * 10}px;
-  left: ${49 * 10}px;
-  width: ${48 * 2}px;
+  left: ${49 * 15}px;
+  width: ${80}px;
   height: ${48 * 2}px;
   background-image: url(/images/demon.png);
   background-repeat: no-repeat;
+  background-position: ${-35}px 0;
   animation: demon-animation 1s steps(4) infinite;
 `
 

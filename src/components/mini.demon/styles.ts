@@ -15,9 +15,10 @@ const MiniDemonImage = styled.div`
   bottom: ${28 * 1}px;
   left: ${49 * 10}px;
   width: ${48}px;
-  height: 100px;
+  height: 65px;
   background-image: url(/images/mini-demon.png);
   background-repeat: no-repeat;
+  background-position: 0 ${-35}px;
   animation: mini-demon-animation 1s steps(4) infinite;
 `
 
