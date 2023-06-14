@@ -6,7 +6,7 @@ const TrapImage = styled.div`
       background-position-x: 0;
     }
     to {
-      background-position-x: -192px;
+      background-position-x: -384px;
     }
   }
 

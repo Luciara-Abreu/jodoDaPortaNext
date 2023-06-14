@@ -6,18 +6,18 @@ const ChestImage = styled.div`
       background-position-x: 0;
     }
     to {
-      background-position-x: -192px;
+      background-position-x: -144px;
     }
   }
 
   position: absolute;
-  bottom: ${21 * 9}px;
-  left: ${42 * 10}px;
+  bottom: ${20 * 9}px;
+  left: ${24 * 10}px;
   width: ${48}px;
   height: 50px;
   background-image: url(/images/chest.png);
   background-repeat: no-repeat;
-  animation: chest-animation 1s steps(4) infinite;
+  animation: chest-animation 1s steps(3) infinite;
 `
 
 export { ChestImage }
