@@ -1,19 +1,34 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
-const Container = styled.div`
-  background: rgb(202, 194, 194);
-  width: auto;
-  height: 100vh;
-  margin: 0;
-  padding: 0;
+const ContainerApp = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #282c34;
+
+  > h1 {
+    color: #fff;
+    margin: 0;
+    padding: 0;
+  }
+
+  `
+
+const Body = styled.div`
+  width: 100%;
+  height: 89.3vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   @media (max-width: 767px) {
-    width: auto;
-    height: auto;
-    background: blue;
+    margin: 0;
+    padding: 0;
   }
 `
 
-export {
-  Container
-}
+/* -----------------------------------------------------------------------*/
+
+export { ContainerApp, Body }

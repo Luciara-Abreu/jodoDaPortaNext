@@ -1,9 +1,10 @@
-import { Container } from "@/styles/styles";
+import Tabuleiro from "@/components/tabuleiro/Tabuleiro";
+import { ContainerApp } from "@/styles/styles";
 
 export default function Home() {
   return (
-   <Container>    
-    <h1>teste</h1>
-   </Container>
+   <ContainerApp>    
+    <Tabuleiro />
+   </ContainerApp>
   )
 }
