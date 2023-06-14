@@ -1,10 +1,16 @@
-import Tabuleiro from "@/components/tabuleiro/Tabuleiro";
-import { ContainerApp } from "@/styles/styles";
+import Footer from '@/components/footer/Footer'
+import { Body, ContainerApp } from '@/styles/styles'
+import Tabuleiro from '@/components/tabuleiro/Tabuleiro'
+
 
 export default function Home() {
   return (
-   <ContainerApp>    
-    <Tabuleiro />
-   </ContainerApp>
+    <ContainerApp>
+    <><h1>Bem vindo ao jogo.</h1></>
+      <Body>
+        <Tabuleiro />
+      </Body>
+      <Footer />
+    </ContainerApp>
   )
 }
