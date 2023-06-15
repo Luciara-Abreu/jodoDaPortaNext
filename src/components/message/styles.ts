@@ -1,7 +1,6 @@
 import styled from 'styled-components'
 
 const ContainerMessage = styled.div`
-//--------------------------------------
 .scroll-container {
   position: fixed;
   top: 0;
