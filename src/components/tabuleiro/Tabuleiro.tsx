@@ -5,7 +5,6 @@ import MiniDemon from '../mini.demon/MiniDemon'
 import Demon from '../demon/Demon'
 import Trap from '../trap/trap'
 import Chest from '../chest/chest'
-import ButtonHero from '../button/button'
 import { GAME_SIZE } from '@/settings/constants'
 
 
@@ -18,7 +17,6 @@ function Tabuleiro() {
       <Chest />
       <MiniDemon />
       <Demon/>
-      <ButtonHero />
       <Image
         src="/images/tileset.gif" alt="tabuleiro do jogo" width={GAME_SIZE}  height={530} className="tabuleiro"/>
     </TabuleiroContainer>

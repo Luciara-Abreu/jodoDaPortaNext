@@ -23,14 +23,14 @@ const ButtonHero: React.FC = () => {
 if(buttonUp >=27 && buttonUp <= 43){
     BUTTON_UP_UPDATE = buttonUp
   }else{
-    <Message message="Opz! Fim do mapa. Escolha outro caminho." />
+    return <Message message="Opz! Fim do mapa. Escolha outro caminho." />
   }
 
 
   if(buttonLeft >=155 && buttonLeft <= 174){
     BUTTON_LEFT_UPDATE = buttonLeft
   }else{
-    <Message message="Opz! Fim do mapa. Escolha outro caminho." />
+    return <Message message="Opz! Fim do mapa. Escolha outro caminho." />
   }
   
   console.log('UP => ', BUTTON_UP_UPDATE)
@@ -43,7 +43,6 @@ if(buttonUp >=27 && buttonUp <= 43){
     <button className="arrow-button arrow-left" onClick={changeLeft}></button>
     <button className="arrow-button arrow-right"></button>
     <button className="arrow-button arrow-down" ></button>
-
   </ContainerButton>
   )
 }

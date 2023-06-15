@@ -4,7 +4,7 @@ const ContainerMessage = styled.div`
 .scroll-container {
   position: fixed;
   top: 0;
-  left: 0;
+  right: 0;
   transform: translate(0, 0);
 
   width: 200px;
@@ -17,7 +17,7 @@ const ContainerMessage = styled.div`
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #f2e6d9;
+  background-color: #bf9b89;
   overflow: hidden;
 }
 

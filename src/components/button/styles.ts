@@ -1,11 +1,16 @@
 import  styled from 'styled-components'
 
 const ContainerButton = styled.div`
-  position: relative;
+  position: fixed;
+  top: 285px;
+  left: 25px;
+  transform: translate(0, 0);
+
   width: 150px;
   height: 150px;
   border-radius: 50%;
-  background-color: #f0f0f0;
+  //background-color: #bf9b89;
+  background-color: pink;
   display: flex;
   justify-content: center;
   align-items: center;
