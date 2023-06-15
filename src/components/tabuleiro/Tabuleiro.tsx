@@ -1,4 +1,3 @@
-import { GAME_SIZE } from '@/settings/constants'
 import Hero from '../hero/Hero'
 import { TabuleiroContainer } from './styles'
 import Image from 'next/image'
@@ -7,6 +6,7 @@ import Demon from '../demon/Demon'
 import Trap from '../trap/trap'
 import Chest from '../chest/chest'
 import ButtonHero from '../button/button'
+import { GAME_SIZE } from '@/settings/constants'
 
 
 

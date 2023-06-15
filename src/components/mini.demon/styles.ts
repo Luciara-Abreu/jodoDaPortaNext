@@ -1,4 +1,3 @@
-import { TILE_SIZE } from '@/settings/constants'
 import styled from 'styled-components'
 
 const MiniDemonImage = styled.div`
