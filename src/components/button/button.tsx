@@ -1,28 +1,28 @@
 import { useState } from 'react'
 import { ContainerButton } from "./styles"
-import { HERO_BUTTON_UP_DOW, HERO_BUTTON_LEFT_RIGHT } from '@/settings/constants'
+import { HERO_BUTTON_UP, HERO_BUTTON_LEFT } from '@/settings/constants'
 
 
 
 const ButtonHero = () => {
-  const[button_position, setButton_position]= useState(HERO_BUTTON_UP_DOW)
-  const[left_position, setLeft_position]= useState(HERO_BUTTON_LEFT_RIGHT)
+  const[button_position, setButton_position]= useState(HERO_BUTTON_UP)
+  const[left_position, setLeft_position]= useState(HERO_BUTTON_LEFT)
 
   const changeButtonPostionUp = () => {
-    setButton_position({ x: HERO_BUTTON_UP_DOW.x + 1})
+    setButton_position({ x: HERO_BUTTON_UP.x + 1})
   }
 
   const changeButtonPostionLeft = () => {
-    setLeft_position({ y: HERO_BUTTON_LEFT_RIGHT.y + 1})
+    setLeft_position({ y: HERO_BUTTON_LEFT.y + 1})
   }
 
 
   const changeButtonPostionDown= () => {
-    setButton_position({ x: HERO_BUTTON_UP_DOW.x - 1})
+    setButton_position({ x: HERO_BUTTON_UP.x - 1})
   }
 
   const changeButtonPostionRight = () => {
-    setLeft_position({ y: HERO_BUTTON_LEFT_RIGHT.y - 1})
+    setLeft_position({ y: HERO_BUTTON_LEFT.y - 1})
   }
 
 
