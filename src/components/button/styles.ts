@@ -15,37 +15,45 @@ const ContainerButton = styled.div`
     width: 0;
     height: 0;
     border-style: solid;
-    transform: rotate(180deg);
-    background-color: blue;
+    background-color: transparent;
+    transition: box-shadow 0.3s;
+    cursor: pointer;
   }
 
   .arrow-button.arrow-right {
-    border-width: 20px 0 20px 40px;
+    border-width: 30px 0 30px 50px;
     border-color: transparent transparent transparent #000;
     right: 0;
     margin-right: 100px;
+    transform: rotate(180deg);
   }
 
   .arrow-button.arrow-left {
-    border-width: 20px 40px 20px 0;
+    border-width: 30px 50px 30px 0;
     border-color: transparent #000 transparent transparent;
     left: 0;
     margin-left: 100px;
+    transform: rotate(180deg);
   }
 
   .arrow-button.arrow-up {
-    border-width: 40px 20px 0 20px;
-    border-color: #000 transparent transparent transparent;
-    top: 0;
-    margin-top: 1px;
+    border-width: 30px 50px 30px 0;
+    transform: rotate(90deg);
+    border-color: transparent #000 transparent transparent;
+    bottom: 100px
   }
 
   .arrow-button.arrow-down {
-    border-width: 0 20px 40px 20px;
-    border-color: transparent transparent #000 transparent;
-    bottom: 0;
-    margin-bottom: 1px;
+    border-width: 30px 50px 30px 0;
+    transform: rotate(270deg);
+    border-color: transparent #000 transparent transparent;
+    top: 100px;
   }
-`;
+
+  .arrow-button:hover {
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+  }
+`
 
 export { ContainerButton }
+
