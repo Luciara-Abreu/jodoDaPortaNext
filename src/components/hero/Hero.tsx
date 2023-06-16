@@ -1,19 +1,24 @@
-import { ButtonUp, ButtonLeft } from '../button/ButtonHero';
-import { HeroImage } from './styles'
+import { HeroImage } from './styles';
 
 export interface IHeroProps {
   buttonUp: number;
   buttonLeft: number;
 }
 
-console.log('Class Hero ButtonUp ==> ',ButtonUp)
-console.log('Class Hero ButtonLeft ==> ', ButtonLeft)
-
 const Hero: React.FC<IHeroProps> = ({ buttonUp, buttonLeft }) => {
+  const imageStyle = {
+    botton: `${buttonUp}px`,
+    left: `${buttonLeft}px`,
+  };
+
+  console.log('Class Hero newButtonUp ==> ', buttonUp);
+  console.log('Class Hero ButtonLeft ==> ', buttonLeft);
+
   return (
     <>
-      <HeroImage buttonUp={ButtonUp} buttonLeft={ButtonLeft} />
+      <HeroImage style={imageStyle}/>
     </>
   );
 };
+
 export default Hero

@@ -1,39 +1,38 @@
-import { useState } from 'react'
-import { ContainerButton } from "./styles"
-import { BUTTON_UP, BUTTON_LEFT, FIM_DO_MAPA_Y, FIM_DO_MAPA_X } from '@/settings/constants'
-import Message from '../message/mensage'
+import { useState } from 'react';
+import { ContainerButton } from "./styles";
+import { BUTTON_UP, BUTTON_LEFT, FIM_DO_MAPA_Y, FIM_DO_MAPA_X } from '@/settings/constants';
+import Message from '../message/mensage';
 
-  let BUTTON_UP_UPDATE = BUTTON_UP;
-  let BUTTON_LEFT_UPDATE = BUTTON_LEFT;
+interface ButtonHeroProps {
+  onPositionUpdate: (buttonUp: number, buttonLeft: number) => void;
+}
 
-const ButtonHero: React.FC = () => {
-  const [buttonUp, setButtonUp] = useState(BUTTON_UP)
-  const [buttonLeft, setButtonLeft] = useState(BUTTON_LEFT)
+const ButtonHero: React.FC<ButtonHeroProps> = ({ onPositionUpdate }) => {
+  const [buttonUp, setButtonUp] = useState(BUTTON_UP);
+  const [buttonLeft, setButtonLeft] = useState(BUTTON_LEFT);
   let message = "";
 
-  
   const changeUP = () => {
-    setButtonUp(buttonUp + 1)
-    if (buttonUp >= BUTTON_UP && buttonUp <= FIM_DO_MAPA_Y) {
-      BUTTON_UP_UPDATE = buttonUp
+    const newButtonUp = buttonUp + 1;
+    if (newButtonUp >= BUTTON_UP && newButtonUp <= FIM_DO_MAPA_Y) {
+      setButtonUp((prevButtonUp) => prevButtonUp + 1);
+      console.log('Class Button ButtonUp ==> ', newButtonUp);
+      onPositionUpdate(newButtonUp, buttonLeft);
     } else {
-      message = "Opz! Fim do mapa. Escolha outro caminho."
+      message = "Opz! Fim do mapa. Escolha outro caminho.";
     }
-  }
+  };
 
   const changeLeft = () => {
-    setButtonLeft(buttonLeft + 1)
-    if (buttonLeft >= BUTTON_LEFT && buttonLeft <= FIM_DO_MAPA_X) {
-      BUTTON_LEFT_UPDATE = buttonLeft
+    const newButtonLeft = buttonLeft + 1;
+    if (newButtonLeft >= BUTTON_LEFT && newButtonLeft <= FIM_DO_MAPA_X) {
+      setButtonLeft((prevButtonLeft) => prevButtonLeft + 1);
+      console.log('Class Button ButtonLeft ==> ', newButtonLeft);
+      onPositionUpdate(buttonUp, newButtonLeft);
     } else {
-      message = "Opz! Fim do mapa. Escolha outro caminho."
-    }    
-  }
-
-
-  console.log('Class Button ButtonUp ==> ',BUTTON_UP_UPDATE)  
-  console.log('Class Button ButtonLeft ==> ', BUTTON_LEFT_UPDATE)
-
+      message = "Opz! Fim do mapa. Escolha outro caminho.";
+    }
+  };
 
   return (
     <>
@@ -45,10 +44,10 @@ const ButtonHero: React.FC = () => {
       </ContainerButton>
       {message && <Message message={message} />}
     </>
-  )
-}
-export default ButtonHero //
-export { BUTTON_UP_UPDATE as ButtonUp, BUTTON_LEFT_UPDATE as ButtonLeft};
+  );
+};
+
+export default ButtonHero;
 
 
 /**

@@ -1,7 +1,7 @@
 import styled from 'styled-components'
-import { IHeroProps } from './Hero';
 
-const HeroImage = styled.div<IHeroProps>`
+
+const HeroImage = styled.div`
   @keyframes hero-animation {
     from {
       background-position-x: 0;
@@ -13,8 +13,6 @@ const HeroImage = styled.div<IHeroProps>`
 
 
   position: absolute;
-  bottom: ${(props) => props.buttonUp}px;
-  left: ${(props) => props.buttonLeft}px;
   width: ${48}px;
   height: 65px;
   background-image: url(/images/hero.png);
