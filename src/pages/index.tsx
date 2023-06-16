@@ -1,7 +1,8 @@
 import Footer from '@/components/footer/Footer'
 import { Body, ContainerApp } from '@/styles/styles'
 import Tabuleiro from '@/components/tabuleiro/Tabuleiro'
-import ButtonHero from '@/components/button/button'
+import ButtonHero from '@/components/button/ButtonHero'
+
 
 
 export default function Home() {

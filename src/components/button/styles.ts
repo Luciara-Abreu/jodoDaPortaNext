@@ -9,8 +9,8 @@ const ContainerButton = styled.div`
   width: 150px;
   height: 150px;
   border-radius: 50%;
-  //background-color: #bf9b89;
-  background-color: pink;
+  background-color: #bf9b89;
+  //background-color: pink;
   display: flex;
   justify-content: center;
   align-items: center;

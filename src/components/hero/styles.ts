@@ -1,9 +1,7 @@
-//import { BUTTON_LEFT, BUTTON_UP } from '@/settings/constants'
 import styled from 'styled-components'
-import { BUTTON_UP_UPDATE, BUTTON_LEFT_UPDATE} from '../button/button'
+import { IHeroProps } from './Hero';
 
-
-const HeroImage = styled.div`
+const HeroImage = styled.div<IHeroProps>`
   @keyframes hero-animation {
     from {
       background-position-x: 0;
@@ -13,9 +11,10 @@ const HeroImage = styled.div`
     }
   }
 
+
   position: absolute;
-  bottom: ${BUTTON_UP_UPDATE}px;
-  left: ${BUTTON_LEFT_UPDATE}px;
+  bottom: ${(props) => props.buttonUp}px;
+  left: ${(props) => props.buttonLeft}px;
   width: ${48}px;
   height: 65px;
   background-image: url(/images/hero.png);
