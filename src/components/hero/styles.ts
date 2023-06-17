@@ -17,7 +17,7 @@ const HeroImage = styled.div`
   height: 65px;
   background-image: url(/images/hero.png);
   background-repeat: no-repeat;
-  background-position: 0 ${-35}px;
+  background-position: 0 ${-30}px;
   animation: hero-animation 1s steps(4) infinite;
 `
 

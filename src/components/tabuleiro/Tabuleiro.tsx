@@ -6,20 +6,14 @@ import Demon from '../demon/Demon'
 import Trap from '../trap/trap'
 import Chest from '../chest/chest'
 import { GAME_SIZE } from '@/settings/constants'
+import { IHeroProps } from '@/interfaces/heroInterfaces'
 
-interface TabuleiroProps {
-  buttonUp: number;
-  buttonLeft: number;
-}
-const Tabuleiro: React.FC<TabuleiroProps> = ({ buttonUp, buttonLeft }) => {
 
-  console.log('Class Tabuleiro newButtonUp ==> ', buttonUp);
-  console.log('Class Tabuleiro ButtonLeft ==> ', buttonLeft);
-
+const Tabuleiro: React.FC<IHeroProps> = ({buttonLeft, buttonRight }) => {
 
   return (
     <TabuleiroContainer>
-      <Hero  buttonUp={buttonUp} buttonLeft={buttonLeft} />
+      <Hero  buttonLeft={buttonLeft} buttonRight={buttonRight}/>
       <Trap />
       <Chest />
       <MiniDemon />

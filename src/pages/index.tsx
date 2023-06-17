@@ -2,27 +2,25 @@ import Footer from '@/components/footer/Footer'
 import { Body, ContainerApp } from '@/styles/styles'
 import Tabuleiro from '@/components/tabuleiro/Tabuleiro'
 import ButtonHero from '@/components/button/ButtonHero'
-import { useState } from 'react';
+import { SetStateAction, useState } from 'react';
+import { POSITION_LEFT, POSITION_RIGHT } from '@/settings/constants';
 
 
 export default function Home() {
-  const [buttonUp, setButtonUp] = useState(0);
-  const [buttonLeft, setButtonLeft] = useState(0);
+  const [buttonLeft, setButtonLeft] = useState(POSITION_LEFT);
+  const [buttonRight, setButtonRight] = useState(POSITION_RIGHT);
 
-  const handlePositionUpdate = (newButtonUp: number, newButtonLeft: number) => {
-    setButtonUp(newButtonUp);
-    setButtonLeft(newButtonLeft);
-    
-    console.log('Class Pages newButtonUp ==> ', newButtonUp);
-    console.log('Class Pages ButtonLeft ==> ', newButtonLeft);
-  };
+  const handlePositionUpdate = ( newButtonLeft: number, newButtonRight: number) => {
+    setButtonLeft(newButtonLeft)
+    setButtonRight(newButtonRight)
+    };
 
   return (
     <ContainerApp>
     <><h1>Bem vindo ao jogo.</h1></>
       <Body>
       <ButtonHero onPositionUpdate={handlePositionUpdate} />
-      <Tabuleiro buttonUp={buttonUp} buttonLeft={buttonLeft} />
+      <Tabuleiro buttonLeft={buttonLeft} buttonRight={buttonRight}/>
       </Body>
       <Footer />
     </ContainerApp>
