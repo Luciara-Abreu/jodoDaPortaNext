@@ -6,7 +6,7 @@ const ContainerButton = styled.div`
   left: 25px;
   transform: translate(0, 0);
 
-  width: 150px;
+  width: 136px;
   height: 150px;
   border-radius: 50%;
   background-color: #bf9b89;
@@ -26,7 +26,7 @@ const ContainerButton = styled.div`
   }
 
   .arrow-button.arrow-right {
-    border-width: 30px 0 30px 50px;
+    border-width: 15px 0 15px 35px;//30px 0 30px 50px;
     border-color: transparent transparent transparent #000;
     right: 0;
     margin-right: 100px;
@@ -34,7 +34,7 @@ const ContainerButton = styled.div`
   }
 
   .arrow-button.arrow-left {
-    border-width: 30px 50px 30px 0;
+    border-width: 15px 35px 15px 0;//30px 50px 30px 0;
     border-color: transparent #000 transparent transparent;
     left: 0;
     margin-left: 100px;
@@ -42,17 +42,17 @@ const ContainerButton = styled.div`
   }
 
   .arrow-button.arrow-up {
-    border-width: 30px 50px 30px 0;
+    border-width: 15px 35px 15px 0;//30px 50px 30px 0;
     transform: rotate(90deg);
     border-color: transparent #000 transparent transparent;
-    bottom: 100px
+    bottom: 107px
   }
 
   .arrow-button.arrow-down {
-    border-width: 30px 50px 30px 0;
+    border-width: 15px 35px 15px 0; //30px 50px 30px 0;
     transform: rotate(270deg);
     border-color: transparent #000 transparent transparent;
-    top: 100px;
+    top: 107px;
   }
 
   .arrow-button:hover {

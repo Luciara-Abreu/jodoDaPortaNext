@@ -1,10 +1,10 @@
 export interface IHeroProps {
-  //buttonTop: number;
+  buttonTop: number;
   buttonRight: number;
   //buttonBotton: number; 
   buttonLeft: number;
 }
 
 export interface ButtonHeroProps {
-  onPositionUpdate: (buttonLeft: number, buttonRight: number) => void;
+  onPositionUpdate: (buttonLeft: number, buttonRight: number, buttonTop: number ) => void;
 }

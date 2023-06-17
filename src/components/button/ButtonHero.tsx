@@ -9,6 +9,7 @@ import { ButtonHeroProps } from '@/interfaces/heroInterfaces';
 const ButtonHero: React.FC<ButtonHeroProps> = ({ onPositionUpdate }) => {
   const [buttonLeft, setButtonLeft] = useState( POSITION_LEFT);
   const [buttonRight, setButtonRight] = useState( POSITION_RIGHT);
+  const [buttonTop, setButtonTop] = useState( POSITION_TOP);
 
   let message = "";
 
@@ -16,8 +17,7 @@ const ButtonHero: React.FC<ButtonHeroProps> = ({ onPositionUpdate }) => {
     const newButtonLeft = buttonLeft;
     if (newButtonLeft >= POSITION_LEFT && newButtonLeft <= FIM_DO_MAPA_X) {
       setButtonLeft( buttonLeft + 47)
-      console.log('Class Button buttonLeft ==> ', buttonLeft);
-      onPositionUpdate( newButtonLeft, buttonRight);
+      onPositionUpdate( newButtonLeft, buttonRight, buttonTop);
     } else {
       message = "Opz! Fim do mapa. Escolha outro caminho.";
     }
@@ -27,8 +27,17 @@ const ButtonHero: React.FC<ButtonHeroProps> = ({ onPositionUpdate }) => {
     const newButtonLeft = buttonLeft;
     if (newButtonLeft >= POSITION_LEFT && newButtonLeft <= FIM_DO_MAPA_X) {
       setButtonLeft( buttonLeft - 47)
-      console.log('Class Button buttonLeft ==> ', buttonLeft);
-      onPositionUpdate( newButtonLeft, buttonRight);
+      onPositionUpdate( newButtonLeft, buttonRight, buttonTop);
+    } else {
+      message = "Opz! Fim do mapa. Escolha outro caminho.";
+    }
+  };
+
+  const changeTop = () => {
+    const newButtonTop = buttonTop;
+    if (newButtonTop >= POSITION_TOP && newButtonTop <= FIM_DO_MAPA_Y) {
+      setButtonTop( buttonTop + 30)
+      onPositionUpdate( newButtonTop, buttonRight, buttonLeft );
     } else {
       message = "Opz! Fim do mapa. Escolha outro caminho.";
     }
@@ -37,9 +46,9 @@ const ButtonHero: React.FC<ButtonHeroProps> = ({ onPositionUpdate }) => {
   return (
     <>
       <ContainerButton>    
-      <button className="arrow-button arrow-up"></button>
         <button className="arrow-button arrow-right" onClick={changeRight}></button>
-        <button className="arrow-button arrow-down"></button>
+        <button className="arrow-button arrow-up" ></button>
+        <button className="arrow-button arrow-down" onClick={changeTop}></button>
         <button className="arrow-button arrow-left" onClick={changeLeft}></button>
       </ContainerButton>
       {message && <Message message={message} />}
