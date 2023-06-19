@@ -24,8 +24,10 @@ export default function Home() {
     <ContainerApp>
     <><h1>Bem vindo ao jogo.</h1></>
       <Body>
-      <ButtonHero onPositionUpdate={handlePositionUpdate} />
       <Tabuleiro buttonLeft={buttonLeft} buttonRight={buttonRight} buttonDown={buttonDown} buttonUp={buttonUp}/>
+      <div className='button-hero'>
+      <ButtonHero onPositionUpdate={handlePositionUpdate} />
+      </div>
       </Body>
       <Footer />
     </ContainerApp>

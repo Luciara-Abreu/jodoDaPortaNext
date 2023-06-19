@@ -35,8 +35,8 @@ const ButtonHero: React.FC<ButtonHeroProps> = ({ onPositionUpdate }) => {
     }
   };
 
-  const changeTop = () => {
-    const newButtonDown = buttonDown + 27;
+  const changeDown = () => {
+    const newButtonDown = buttonDown + 35;
     if (newButtonDown >= POSITION_TOP && newButtonDown <= FIM_DO_MAPA_Y) {
       setButtonDown(newButtonDown);
       onPositionUpdate(buttonLeft, buttonRight, newButtonDown, buttonUp)
@@ -46,7 +46,7 @@ const ButtonHero: React.FC<ButtonHeroProps> = ({ onPositionUpdate }) => {
   };
 
   const changeUp = () => {
-    const newButtonDown = buttonDown - 27;
+    const newButtonDown = buttonDown - 35;
     if (newButtonDown >= POSITION_TOP && newButtonDown <= FIM_DO_MAPA_Y) {
       setButtonDown(newButtonDown);
       onPositionUpdate(buttonLeft, buttonRight, newButtonDown, buttonUp)
@@ -60,7 +60,7 @@ const ButtonHero: React.FC<ButtonHeroProps> = ({ onPositionUpdate }) => {
       <ContainerButton>    
         <button className="arrow-button arrow-right" onClick={changeRight}></button>
         <button className="arrow-button arrow-up" onClick={changeUp}></button>
-        <button className="arrow-button arrow-down" onClick={changeTop}></button>
+        <button className="arrow-button arrow-down" onClick={changeDown}></button>
         <button className="arrow-button arrow-left" onClick={changeLeft}></button>
       </ContainerButton>
       {message && <Message message={message} />}
