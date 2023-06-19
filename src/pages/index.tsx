@@ -2,7 +2,7 @@ import Footer from '@/components/footer/Footer'
 import { Body, ContainerApp } from '@/styles/styles'
 import Tabuleiro from '@/components/tabuleiro/Tabuleiro'
 import ButtonHero from '@/components/button/ButtonHero'
-import { SetStateAction, useState } from 'react';
+import { useState } from 'react';
 import { POSITION_LEFT, POSITION_RIGHT, POSITION_TOP, POSITION_UP } from '@/settings/constants';
 
 
