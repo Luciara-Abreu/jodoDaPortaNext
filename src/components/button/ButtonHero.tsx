@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { ContainerButton } from "./styles";
-import {FIM_DO_MAPA_Y, FIM_DO_MAPA_X, POSITION_TOP, POSITION_RIGHT, POSITION_BOTTON, POSITION_LEFT } from '@/settings/constants';
+import {FIM_DO_MAPA_Y, FIM_DO_MAPA_X, POSITION_TOP, POSITION_RIGHT, POSITION_UP, POSITION_LEFT } from '@/settings/constants';
 import Message from '../message/mensage';
 import { ButtonHeroProps } from '@/interfaces/heroInterfaces';
 
@@ -9,35 +9,47 @@ import { ButtonHeroProps } from '@/interfaces/heroInterfaces';
 const ButtonHero: React.FC<ButtonHeroProps> = ({ onPositionUpdate }) => {
   const [buttonLeft, setButtonLeft] = useState( POSITION_LEFT);
   const [buttonRight, setButtonRight] = useState( POSITION_RIGHT);
-  const [buttonTop, setButtonTop] = useState( POSITION_TOP);
+  const [buttonDown, setButtonDown] = useState( POSITION_TOP);
+  const [buttonUp, setButtonUp] = useState(POSITION_UP);
 
   let message = "";
 
   const changeLeft = () => {
-    const newButtonLeft = buttonLeft;
+    const newButtonLeft = buttonLeft + 47;
     if (newButtonLeft >= POSITION_LEFT && newButtonLeft <= FIM_DO_MAPA_X) {
-      setButtonLeft( buttonLeft + 47)
-      onPositionUpdate( newButtonLeft, buttonRight, buttonTop);
+      setButtonLeft( newButtonLeft)
+      onPositionUpdate( newButtonLeft, buttonRight, buttonDown, buttonUp);
     } else {
       message = "Opz! Fim do mapa. Escolha outro caminho.";
     }
   };
 
+
   const changeRight = () => {
-    const newButtonLeft = buttonLeft;
+    const newButtonLeft = buttonLeft - 47;
     if (newButtonLeft >= POSITION_LEFT && newButtonLeft <= FIM_DO_MAPA_X) {
-      setButtonLeft( buttonLeft - 47)
-      onPositionUpdate( newButtonLeft, buttonRight, buttonTop);
+      setButtonLeft( newButtonLeft)
+      onPositionUpdate( newButtonLeft, buttonRight, buttonDown, buttonUp);
     } else {
       message = "Opz! Fim do mapa. Escolha outro caminho.";
     }
   };
 
   const changeTop = () => {
-    const newButtonTop = buttonTop;
-    if (newButtonTop >= POSITION_TOP && newButtonTop <= FIM_DO_MAPA_Y) {
-      setButtonTop( buttonTop + 30)
-      onPositionUpdate( newButtonTop, buttonRight, buttonLeft );
+    const newButtonDown = buttonDown + 27;
+    if (newButtonDown >= POSITION_TOP && newButtonDown <= FIM_DO_MAPA_Y) {
+      setButtonDown(newButtonDown);
+      onPositionUpdate(buttonLeft, buttonRight, newButtonDown, buttonUp)
+    } else {
+      message = "Opz! Fim do mapa. Escolha outro caminho.";
+    }
+  };
+
+  const changeUp = () => {
+    const newButtonDown = buttonDown - 27;
+    if (newButtonDown >= POSITION_TOP && newButtonDown <= FIM_DO_MAPA_Y) {
+      setButtonDown(newButtonDown);
+      onPositionUpdate(buttonLeft, buttonRight, newButtonDown, buttonUp)
     } else {
       message = "Opz! Fim do mapa. Escolha outro caminho.";
     }
@@ -47,7 +59,7 @@ const ButtonHero: React.FC<ButtonHeroProps> = ({ onPositionUpdate }) => {
     <>
       <ContainerButton>    
         <button className="arrow-button arrow-right" onClick={changeRight}></button>
-        <button className="arrow-button arrow-up" ></button>
+        <button className="arrow-button arrow-up" onClick={changeUp}></button>
         <button className="arrow-button arrow-down" onClick={changeTop}></button>
         <button className="arrow-button arrow-left" onClick={changeLeft}></button>
       </ContainerButton>
@@ -57,6 +69,7 @@ const ButtonHero: React.FC<ButtonHeroProps> = ({ onPositionUpdate }) => {
 };
 
 export default ButtonHero;
+
 
 
 /**

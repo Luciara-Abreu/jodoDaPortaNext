@@ -10,7 +10,6 @@ const ContainerButton = styled.div`
   height: 150px;
   border-radius: 50%;
   background-color: #bf9b89;
-  //background-color: pink;
   display: flex;
   justify-content: center;
   align-items: center;

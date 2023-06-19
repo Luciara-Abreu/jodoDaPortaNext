@@ -9,11 +9,11 @@ import { GAME_SIZE } from '@/settings/constants'
 import { IHeroProps } from '@/interfaces/heroInterfaces'
 
 
-const Tabuleiro: React.FC<IHeroProps> = ({buttonLeft, buttonRight, buttonTop }) => {
+const Tabuleiro: React.FC<IHeroProps> = ({buttonLeft, buttonRight, buttonDown, buttonUp}) => {
 
   return (
     <TabuleiroContainer>
-      <Hero  buttonLeft={buttonLeft} buttonRight={buttonRight} buttonTop={buttonTop}/>
+      <Hero  buttonLeft={buttonLeft} buttonRight={buttonRight} buttonDown={buttonDown} buttonUp={buttonUp}/>
       <Trap />
       <Chest />
       <MiniDemon />
