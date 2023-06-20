@@ -10,10 +10,29 @@ const ContainerApp = styled.div`
 
   > h1 {
     color: #fff;
+    font-size: 70px;
+    padding-top: 5%;
     margin: 0;
-    padding: 0;
   }
 
+  @media (max-width: 767px) {
+    margin: 0;
+    padding: 0;
+    width: 244%;
+    height: 244vh;
+    display: flex;
+    flex-direction: column;  
+    justify-content: center;
+    align-items: center;
+    background: #282c34;
+
+    > h1 {
+    color: #fff;
+    padding-top: 5%;
+    font-size: 70px;
+    margin: 0;
+  }
+  }
   `
 
 const Body = styled.div`
@@ -25,14 +44,25 @@ const Body = styled.div`
 
   .button-hero {
   position: absolute;
-  //bottom: 490px; /* Define uma distância do fundo */
   left: 45%; /* Alinha horizontalmente ao centro */
   transform: translateX(-50%); /* Centraliza horizontalmente */
 }
 
   @media (max-width: 767px) {
-    margin: 0;
-    padding: 0;
+  width: 100%;
+  height: 250vh;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+    .button-hero {
+  position: absolute;
+  top: 155%;
+  left: 90%; /* Alinha horizontalmente ao centro */
+  transform: translateX(-50%); /* Centraliza horizontalmente */
+}
   }
 `
 

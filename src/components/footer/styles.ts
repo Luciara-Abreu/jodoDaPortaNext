@@ -14,13 +14,13 @@ align-items: center;
 }
 
 @media (max-width: 767px) {
-    width: auto;
+    width: 85%;
     height: auto;
     margin-top: 0;
     padding: 0% 8% 0% 8%;
 
     .p-footer{
-  font-size: 10px;
+  font-size: 25px;
 }
   }
 `
