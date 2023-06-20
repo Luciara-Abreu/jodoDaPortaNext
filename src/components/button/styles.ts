@@ -2,7 +2,7 @@ import  styled from 'styled-components'
 
 const ContainerButton = styled.div`
   position: fixed;
-  top: 285px;
+  top: 265px;
   left: 25px;
   transform: translate(0, 0);
 

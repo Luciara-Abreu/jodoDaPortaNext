@@ -1,13 +1,14 @@
 import styled from 'styled-components'
 
 const ContainerComponentFooter = styled.div`
-display: flex;
 width: 100%;
 height:5vh;
+display: flex;
 background-color: black;
 color: antiquewhite;
 justify-content: center;
 align-items: center;
+margin-bottom: 0;
 
 .p-footer{
   font-size: 15px;

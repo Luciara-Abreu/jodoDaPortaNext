@@ -2,6 +2,7 @@ import styled from 'styled-components'
 
 const ContainerApp = styled.div`
   width: 100%;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -11,8 +12,7 @@ const ContainerApp = styled.div`
   > h1 {
     color: #fff;
     font-size: 70px;
-    padding-top: 5%;
-    margin: 0;
+    margin: 0 0 1% 0;
   }
 
   @media (max-width: 767px) {
@@ -37,7 +37,7 @@ const ContainerApp = styled.div`
 
 const Body = styled.div`
   width: 100%;
-  height: 91.2vh;
+  height: 85.2vh; //92.2vh
   display: flex;
   justify-content: center;
   align-items: center;

@@ -5,7 +5,7 @@ const TabuleiroContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  top: 8%;
+  top: 10%;
 
 @media (max-width: 767px) {
 top: 70%;
