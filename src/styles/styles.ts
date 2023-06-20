@@ -18,8 +18,8 @@ const ContainerApp = styled.div`
   @media (max-width: 767px) {
     margin: 0;
     padding: 0;
-    width: 244%;
-    height: 244vh;
+    width: 270%;
+    height: 270vh;
     display: flex;
     flex-direction: column;  
     justify-content: center;
