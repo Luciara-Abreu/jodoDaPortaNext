@@ -1,4 +1,4 @@
-import { GAME_SIZE, TILE_SIZE } from '@/settings/constants'
+import { TILE_SIZE } from '@/settings/constants'
 import styled from 'styled-components'
 
 const TabuleiroContainer = styled.div`
@@ -12,8 +12,8 @@ const TabuleiroContainer = styled.div`
 
   //width={GAME_SIZE}  height={575}
   .image-tabuleiro{
-    width: ${TILE_SIZE * 30}px;
-    height: 785px;
+    width: 970px;
+    height: 575px;
   }
 
 @media (max-width: 767px) {
