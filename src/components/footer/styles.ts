@@ -14,7 +14,7 @@ align-items: center;
 }
 
 @media (max-width: 767px) {
-    width: 85%;
+    width: 82%;
     height: auto;
     margin-top: 0;
     padding: 0% 8% 0% 8%;
