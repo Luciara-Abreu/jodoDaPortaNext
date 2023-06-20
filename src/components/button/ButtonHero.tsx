@@ -15,7 +15,7 @@ const ButtonHero: React.FC<ButtonHeroProps> = ({ onPositionUpdate }) => {
   let message = "";
 
   const changeLeft = () => {
-    const newButtonLeft = buttonLeft + 47;
+    const newButtonLeft = buttonLeft + 48;
     if (newButtonLeft >= POSITION_LEFT && newButtonLeft <= FIM_DO_MAPA_X) {
       setButtonLeft( newButtonLeft)
       onPositionUpdate( newButtonLeft, buttonRight, buttonDown, buttonUp);
@@ -26,7 +26,7 @@ const ButtonHero: React.FC<ButtonHeroProps> = ({ onPositionUpdate }) => {
 
 
   const changeRight = () => {
-    const newButtonLeft = buttonLeft - 47;
+    const newButtonLeft = buttonLeft - 48;
     if (newButtonLeft >= POSITION_LEFT && newButtonLeft <= FIM_DO_MAPA_X) {
       setButtonLeft( newButtonLeft)
       onPositionUpdate( newButtonLeft, buttonRight, buttonDown, buttonUp);
@@ -36,7 +36,7 @@ const ButtonHero: React.FC<ButtonHeroProps> = ({ onPositionUpdate }) => {
   };
 
   const changeDown = () => {
-    const newButtonDown = buttonDown + 35;
+    const newButtonDown = buttonDown + 27;
     if (newButtonDown >= POSITION_TOP && newButtonDown <= FIM_DO_MAPA_Y) {
       setButtonDown(newButtonDown);
       onPositionUpdate(buttonLeft, buttonRight, newButtonDown, buttonUp)
@@ -46,7 +46,7 @@ const ButtonHero: React.FC<ButtonHeroProps> = ({ onPositionUpdate }) => {
   };
 
   const changeUp = () => {
-    const newButtonDown = buttonDown - 35;
+    const newButtonDown = buttonDown - 27;
     if (newButtonDown >= POSITION_TOP && newButtonDown <= FIM_DO_MAPA_Y) {
       setButtonDown(newButtonDown);
       onPositionUpdate(buttonLeft, buttonRight, newButtonDown, buttonUp)
