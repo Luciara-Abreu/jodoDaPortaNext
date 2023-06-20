@@ -19,7 +19,7 @@ const Tabuleiro: React.FC<IHeroProps> = ({buttonLeft, buttonRight, buttonDown, b
       <MiniDemon />
       <Demon/>
       <Image
-        src="/images/tileset.gif" alt="tabuleiro do jogo" width={GAME_SIZE}  height={575} className="tabuleiro"/>
+        src="/images/tileset.gif" alt="tabuleiro do jogo" width={0}  height={0} className="image-tabuleiro"/>
     </TabuleiroContainer>
   )
   }
