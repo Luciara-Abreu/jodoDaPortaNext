@@ -13,7 +13,7 @@ const TabuleiroContainer = styled.div`
   //width={GAME_SIZE}  height={575}
   .image-tabuleiro{
     width: 970px;
-    height: 570px;
+    height: 550px;
   }
 
 @media (max-width: 767px) {
