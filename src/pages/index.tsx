@@ -19,7 +19,7 @@ export default function Home() {
     setButtonUp(newButtonUp)
     };
 
-    console.log('pages == ', buttonLeft, buttonRight, buttonDown)
+
   return (
     <ContainerApp>
     <><h1>Bem vindo ao jogo.</h1></>
