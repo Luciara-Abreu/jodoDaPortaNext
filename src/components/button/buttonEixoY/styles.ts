@@ -45,12 +45,12 @@ const ContainerButton = styled.div`
 
 
   @media (max-width: 767px) {     
+  width: 150px;
+  height: 390px;
   position: fixed;
   top: 255px;
-  left: 25px;
+  left: 120px;
   transform: translate(0, 0);
-  width: 370px;
-  height: 370px;
   border-radius: 50%;
   background-color: #bf9b89;
   display: flex;
@@ -65,22 +65,6 @@ const ContainerButton = styled.div`
     background-color: transparent;
     transition: box-shadow 0.3s;
     cursor: pointer;
-  }
-
-  .arrow-button.arrow-right {
-    border-width: 55px 0 55px 75px;//30px 0 30px 50px;
-    border-color: transparent transparent transparent #000;
-    right: 0;
-    margin-right: 285px;
-    transform: rotate(180deg);
-  }
-
-  .arrow-button.arrow-left {
-    border-width: 55px 75px 55px 0;//30px 50px 30px 0;
-    border-color: transparent #000 transparent transparent;
-    left: 0;
-    margin-left: 285px;
-    transform: rotate(180deg);
   }
 
   .arrow-button.arrow-up {
