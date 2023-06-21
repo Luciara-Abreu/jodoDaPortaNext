@@ -2,12 +2,12 @@ import  styled from 'styled-components'
 
 const ContainerButton = styled.div`
   position: fixed;
-  top: 265px;
-  left: 25px;
+  top: 315px;
+  left: 0;
   transform: translate(0, 0);
 
-  width: 50px;
-  height: 150px;
+  width: 150px;
+  height: 50px;
   border-radius: 50%;
   background-color: #bf9b89;
   display: flex;
@@ -38,20 +38,6 @@ const ContainerButton = styled.div`
     left: 0;
     margin-left: 115px;
     transform: rotate(180deg);
-  }
-
-  .arrow-button.arrow-up {
-    border-width: 15px 35px 15px 0;//30px 50px 30px 0;
-    transform: rotate(90deg);
-    border-color: transparent #000 transparent transparent;
-    bottom: 121px
-  }
-
-  .arrow-button.arrow-down {
-    border-width: 15px 35px 15px 0; //30px 50px 30px 0;
-    transform: rotate(270deg);
-    border-color: transparent #000 transparent transparent;
-    top: 121px;
   }
 
   .arrow-button:hover {

@@ -3,7 +3,7 @@ import  styled from 'styled-components'
 const ContainerButton = styled.div`
   position: fixed;
   top: 265px;
-  left: 25px;
+  left: 50px;
   transform: translate(0, 0);
 
   width: 50px;
@@ -24,22 +24,7 @@ const ContainerButton = styled.div`
     cursor: pointer;
   }
 
-  .arrow-button.arrow-right {
-    border-width: 15px 0 15px 35px; //  15px 0 15px 35px;
-    border-color: transparent transparent transparent #000;
-    margin-right: 115px;
-    transform: rotate(180deg);
-    position: relative;
-  }
-
-  .arrow-button.arrow-left {
-    border-width: 15px 35px 15px 0;//30px 50px 30px 0;
-    border-color: transparent #000 transparent transparent;
-    left: 0;
-    margin-left: 115px;
-    transform: rotate(180deg);
-  }
-
+  
   .arrow-button.arrow-up {
     border-width: 15px 35px 15px 0;//30px 50px 30px 0;
     transform: rotate(90deg);

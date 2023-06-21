@@ -50,6 +50,7 @@ const Body = styled.div`
   transform: translateX(-50%); /* Centraliza horizontalmente */
 }
 
+
   @media (max-width: 767px) {
   width: 100%;
   height: 372vh;
