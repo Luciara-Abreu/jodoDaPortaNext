@@ -21,11 +21,11 @@ const TabuleiroContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  top: 60%;
+  top: 95%;
 
   .image-tabuleiro{
     width: ${TILE_SIZE * 27}px;
-    height: 1500px;
+    height: 1200px;
   }
 }
 `
