@@ -16,14 +16,14 @@ import { useWindowWidth } from '@react-hook/window-size';
   let message = "";
 
   const windowWidth = useWindowWidth();
-  const updateScreenWalkingLeftRight = windowWidth <= 765 ? 65 : 48;
+  const setNewStepLeftRight = windowWidth <= 765 ? 65 : 48;
   const endOfTheMapaX = windowWidth <= 765 ? 1245 : 922; 
 
   
   
   useEffect(() => {
     const updateStepLeftRight = () => {
-      const newStepLeftRight = updateScreenWalkingLeftRight;
+      const newStepLeftRight = setNewStepLeftRight;
       setStepLeftRight(newStepLeftRight);
 
       const newSetMapaX = endOfTheMapaX;
@@ -38,7 +38,7 @@ import { useWindowWidth } from '@react-hook/window-size';
 
 
   const changeLeft = () => {
-    const newButtonLeft = buttonLeft + updateScreenWalkingLeftRight;
+    const newButtonLeft = buttonLeft + setNewStepLeftRight;
     if (newButtonLeft >= POSITION_LEFT && newButtonLeft <= endOfTheMapaX) {
       setButtonLeft( newButtonLeft)
       onPositionUpdateX( newButtonLeft, buttonRight);
@@ -48,7 +48,7 @@ import { useWindowWidth } from '@react-hook/window-size';
   };
 
   const changeRight = () => {
-    const newButtonLeft = buttonLeft - updateScreenWalkingLeftRight;
+    const newButtonLeft = buttonLeft - setNewStepLeftRight;
     if (newButtonLeft >= POSITION_LEFT && newButtonLeft <=  endOfTheMapaX) {
       setButtonLeft( newButtonLeft)
       onPositionUpdateX( newButtonLeft, buttonRight );

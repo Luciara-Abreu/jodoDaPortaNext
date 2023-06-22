@@ -3,16 +3,17 @@ import  styled from 'styled-components'
 const ContainerButton = styled.div`
   position: fixed;
   top: 265px;
-  left: 50px;
+  left: 53px;
   transform: translate(0, 0);
 
   width: 50px;
   height: 150px;
-  border-radius: 50%;
+  border-radius: 20%;
   background-color: #bf9b89;
   display: flex;
   justify-content: center;
   align-items: center;
+
 
 
   .arrow-button {
@@ -28,8 +29,15 @@ const ContainerButton = styled.div`
   .arrow-button.arrow-up {
     border-width: 15px 35px 15px 0;//30px 50px 30px 0;
     transform: rotate(90deg);
-    border-color: transparent #000 transparent transparent;
-    bottom: 121px
+    border-color: transparent #000 transparent transparent;  
+    bottom: 122px; 
+
+  box-shadow: 0 0 40px 40px $blue inset, 0 0 0 0 $blue;
+  transition: all 150ms ease-in-out;
+  
+  &:hover {
+    box-shadow: 0 0 10px 0 $blue inset, 0 0 10px 4px $blue;
+  }
   }
 
   .arrow-button.arrow-down {
@@ -71,7 +79,7 @@ const ContainerButton = styled.div`
     border-width: 55px 75px 55px 0;//30px 50px 30px 0;
     transform: rotate(90deg);
     border-color: transparent #000 transparent transparent;
-    bottom: 275px
+    bottom: 275px;
   }
 
   .arrow-button.arrow-down {
@@ -83,9 +91,9 @@ const ContainerButton = styled.div`
 
   .arrow-button:hover {
     box-shadow: 5px 5px 5px 3px rgba(0, 0, 0, 0.3);
-  }  
+  }
 
-  }  
+  }
 `
 
 export { ContainerButton }

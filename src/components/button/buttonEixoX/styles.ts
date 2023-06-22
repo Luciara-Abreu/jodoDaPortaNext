@@ -8,7 +8,7 @@ const ContainerButton = styled.div`
 
   width: 150px;
   height: 50px;
-  border-radius: 50%;
+  border-radius: 20%;
   background-color: #bf9b89;
   display: flex;
   justify-content: center;
@@ -27,7 +27,7 @@ const ContainerButton = styled.div`
   .arrow-button.arrow-right {
     border-width: 15px 0 15px 35px; //  15px 0 15px 35px;
     border-color: transparent transparent transparent #000;
-    margin-right: 115px;
+    margin-right: 126px;
     transform: rotate(180deg);
     position: relative;
   }

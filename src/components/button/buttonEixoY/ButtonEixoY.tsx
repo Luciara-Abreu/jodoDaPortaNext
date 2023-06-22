@@ -11,6 +11,7 @@ import { useWindowHeight } from '@react-hook/window-size';
   const [stepDownUp, setStepDownUp] = useState(27);
   const [updateMapaY, setUpdateMataY] = useState(442);
 
+
   let message = "";
 
   const windowHeight = useWindowHeight(); 
@@ -39,7 +40,7 @@ import { useWindowHeight } from '@react-hook/window-size';
     const newButtonTop = buttonTop + setNewStepDownUp;    
     if (newButtonTop >= POSITION_TOP && newButtonTop <= endOfTheMapaY) {
       setButtonTop(newButtonTop);
-      onPositionUpdateY( newButtonTop, buttonUp)
+      onPositionUpdateY( newButtonTop, buttonUp);
     } else {
       message = "Opz! Fim do mapa. Escolha outro caminho.";
     }
@@ -49,15 +50,16 @@ import { useWindowHeight } from '@react-hook/window-size';
     const newButtonTop = buttonTop - setNewStepDownUp;
     if (newButtonTop >= POSITION_UP && newButtonTop <= endOfTheMapaY) {
       setButtonTop(newButtonTop);
-      onPositionUpdateY( newButtonTop, buttonUp)
+      onPositionUpdateY( newButtonTop, buttonUp);
     } else {
       message = "Opz! Fim do mapa. Escolha outro caminho.";
     }
   };
 
+
   return (
     <>
-      <ContainerButton>    
+        <ContainerButton  className="glow-on-hover">    
         <button className="arrow-button arrow-up" onClick={changeUp}></button>
         <button className="arrow-button arrow-down" onClick={changeDown}></button>
       </ContainerButton>
@@ -68,3 +70,6 @@ import { useWindowHeight } from '@react-hook/window-size';
 
 export default ButtonHeroY;
 
+/**
+ *       
+ */
