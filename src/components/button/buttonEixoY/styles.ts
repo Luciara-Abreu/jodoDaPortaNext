@@ -14,6 +14,7 @@ const ContainerButton = styled.div`
   justify-content: center;
   align-items: center;
 
+
   .arrow-button {
     position: absolute;
     width: 0;
@@ -23,7 +24,6 @@ const ContainerButton = styled.div`
     transition: box-shadow 0.3s;
     cursor: pointer;
   }
-
   
   .arrow-button.arrow-up {
     border-width: 15px 35px 15px 0;//30px 50px 30px 0;

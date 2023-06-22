@@ -14,9 +14,8 @@ import { useWindowHeight } from '@react-hook/window-size';
   let message = "";
 
   const windowHeight = useWindowHeight(); 
-  const updateScreenWalkingDownUp = windowHeight <= 765 ? 55 : 27; 
-  const setNewStepDownUp = windowHeight <= 765 ? 55 : 27;
-  const endOfTheMapaY = windowHeight <= 765 ? 1055 : 442;
+  const setNewStepDownUp = windowHeight <= 765 ?  27: 55;
+  const endOfTheMapaY = windowHeight <= 765 ? 445 : 1055;
 
   
   useEffect(() => {
@@ -37,7 +36,7 @@ import { useWindowHeight } from '@react-hook/window-size';
 
 
   const changeDown = () => {
-    const newButtonTop = buttonTop + updateScreenWalkingDownUp;    
+    const newButtonTop = buttonTop + setNewStepDownUp;    
     if (newButtonTop >= POSITION_TOP && newButtonTop <= endOfTheMapaY) {
       setButtonTop(newButtonTop);
       onPositionUpdateY( newButtonTop, buttonUp)
@@ -47,7 +46,7 @@ import { useWindowHeight } from '@react-hook/window-size';
   };
 
   const changeUp = () => {
-    const newButtonTop = buttonTop - updateScreenWalkingDownUp;
+    const newButtonTop = buttonTop - setNewStepDownUp;
     if (newButtonTop >= POSITION_UP && newButtonTop <= endOfTheMapaY) {
       setButtonTop(newButtonTop);
       onPositionUpdateY( newButtonTop, buttonUp)
