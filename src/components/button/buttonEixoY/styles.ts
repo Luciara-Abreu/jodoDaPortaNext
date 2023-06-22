@@ -31,14 +31,7 @@ const ContainerButton = styled.div`
     transform: rotate(90deg);
     border-color: transparent #000 transparent transparent;  
     bottom: 122px; 
-
-  box-shadow: 0 0 40px 40px $blue inset, 0 0 0 0 $blue;
-  transition: all 150ms ease-in-out;
-  
-  &:hover {
-    box-shadow: 0 0 10px 0 $blue inset, 0 0 10px 4px $blue;
-  }
-  }
+    }
 
   .arrow-button.arrow-down {
     border-width: 15px 35px 15px 0; //30px 50px 30px 0;
