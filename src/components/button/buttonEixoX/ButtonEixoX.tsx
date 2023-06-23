@@ -17,7 +17,7 @@ import { useWindowWidth } from '@react-hook/window-size';
 
   const windowWidth = useWindowWidth();
   const setNewStepLeftRight = windowWidth <= 765 ? 65 : 48;
-  const endOfTheMapaX = windowWidth <= 765 ? 1245 : 922; 
+  const endOfTheMapaX = windowWidth <= 765 ? 1230 : 922; 
 
   
   
