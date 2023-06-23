@@ -13,8 +13,8 @@ import { useWindowHeight } from '@react-hook/window-size';
   let message = "";
 
   const windowHeight = useWindowHeight(); 
-  const setNewStepDownUp   = windowHeight <= 765 ? 70: 27;
-  const endOfTheMapaY      = windowHeight <= 765 ? 1055: 445;
+  const setNewStepDownUp   = windowHeight <= 765 ? 60 : 27;
+  const endOfTheMapaY      = windowHeight <= 765 ? 1055 : 445;
 
   
   useEffect(() => {
