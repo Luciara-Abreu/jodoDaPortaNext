@@ -21,7 +21,6 @@ const HeroImage = styled.div`
 
   @media (max-width: 767px) {   
   position: absolute;
-  bottom: ${69}px;
   width: ${48}px;
   height: 65px;
   background-image: url(/images/hero.png);

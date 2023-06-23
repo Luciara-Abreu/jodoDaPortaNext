@@ -7,16 +7,14 @@ import { useWindowHeight } from '@react-hook/window-size';
 
   const ButtonHeroY: React.FC<ButtonHeroYProps> = ({ onPositionUpdateY }) => {
   const [buttonUp, setButtonUp] = useState(POSITION_UP);
-  const [buttonTop, setButtonTop] = useState(POSITION_TOP); 
+  const [buttonTop, setButtonTop] = useState(90); 
   const [stepDownUp, setStepDownUp] = useState(27);
   const [updateMapaY, setUpdateMataY] = useState(442);
-
-
   let message = "";
 
   const windowHeight = useWindowHeight(); 
-  const setNewStepDownUp = windowHeight <= 765 ?  27: 55;
-  const endOfTheMapaY = windowHeight <= 765 ? 445 : 1055;
+  const setNewStepDownUp   = windowHeight <= 765 ? 27: 55;
+  const endOfTheMapaY      = windowHeight <= 765 ? 445 : 1055;
 
   
   useEffect(() => {
