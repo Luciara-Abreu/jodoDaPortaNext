@@ -1,63 +1,81 @@
 import { useEffect, useState } from 'react';
 import { ContainerButton } from "./styles";
-import { POSITION_UP, POSITION_TOP} from '@/settings/constants';
+import { POSITION_UP, POSITION_TOP } from '@/settings/constants';
 import Message from '../../message/mensage';
 import { ButtonHeroYProps } from '@/interfaces/heroInterfaces';
-import { useWindowHeight } from '@react-hook/window-size';
+import useWindowDimensions from '@/path/hook/windownsDimension';
 
-  const ButtonHeroY: React.FC<ButtonHeroYProps> = ({ onPositionUpdateY }) => {
+const ButtonHeroY: React.FC<ButtonHeroYProps> = ({ onPositionUpdateY }) => {
   const [buttonUp, setButtonUp] = useState(POSITION_UP);
-  const [buttonTop, setButtonTop] = useState(10); 
+  const [buttonTop, setButtonTop] = useState(10);
   const [stepDownUp, setStepDownUp] = useState(27);
-  const [updateMapaY, setUpdateMataY] = useState(442);
+  const [updateMapaY, setUpdateMapaY] = useState(442);
+  const [endOfTheMapaY, setEndOfTheMapaY] = useState(1055); // Variável adicionada
+
   let message = "";
 
-  const windowHeight = useWindowHeight(); 
-  const setNewStepDownUp   = windowHeight <= 765 ? 60 : 27;
-  const endOfTheMapaY      = windowHeight <= 765 ? 1055 : 445;
+  const { height: windowHeight } = useWindowDimensions();
+  console.log(windowHeight)
 
-  
+
   useEffect(() => {
     const updateStepDownUp = () => {
-      const newStepDownUp = setNewStepDownUp;
+      const newStepDownUp = windowHeight <= 657 ? 27 : 62;
       setStepDownUp(newStepDownUp);
 
-      const newSetMapaY = endOfTheMapaY;
-      setUpdateMataY(newSetMapaY);
-    
+      const newUpdateMapaY = windowHeight <= 657 ? 445 : 1070;
+      setUpdateMapaY(newUpdateMapaY);
+      setEndOfTheMapaY(newUpdateMapaY); // Atualiza o valor de endOfTheMapaY
+
+      // Verificar se o botão está dentro dos limites após a alteração do tamanho da janela
+      if (buttonTop > newUpdateMapaY) {
+        setButtonTop(newUpdateMapaY);
+        onPositionUpdateY(newUpdateMapaY, buttonUp);
+      }
     };
+
     updateStepDownUp();
     window.addEventListener('resize', updateStepDownUp);
     return () => {
       window.removeEventListener('resize', updateStepDownUp);
     };
-  }, []);
-
+  }, [windowHeight]);
 
   const changeDown = () => {
-    const newButtonTop = buttonTop + setNewStepDownUp;    
-    if (newButtonTop >= POSITION_TOP && newButtonTop <= endOfTheMapaY) {
+    const newButtonTop = buttonTop + stepDownUp;
+    const upperLimit = POSITION_TOP;
+    const lowerLimit = endOfTheMapaY;
+
+    console.log('Down upperLimit', upperLimit);
+    console.log('Down lowerLimit', lowerLimit);
+
+    if (newButtonTop >= upperLimit && newButtonTop <= lowerLimit) {
       setButtonTop(newButtonTop);
-      onPositionUpdateY( newButtonTop, buttonUp);
+      onPositionUpdateY(newButtonTop, buttonUp);
     } else {
-      message = "Opz! Fim do mapa. Escolha outro caminho.";
+      message = "Oops! Fim do mapa. Escolha outro caminho.";
     }
   };
 
   const changeUp = () => {
-    const newButtonTop = buttonTop - setNewStepDownUp;
-    if (newButtonTop >= POSITION_UP && newButtonTop <= endOfTheMapaY) {
+    const newButtonTop = buttonTop - stepDownUp;
+    const upperLimit = POSITION_TOP;
+    const lowerLimit = endOfTheMapaY;
+
+    console.log('Up upperLimit', upperLimit);
+    console.log('Up lowerLimit', lowerLimit);
+
+    if (newButtonTop >= upperLimit && newButtonTop <= lowerLimit) {
       setButtonTop(newButtonTop);
-      onPositionUpdateY( newButtonTop, buttonUp);
+      onPositionUpdateY(newButtonTop, buttonUp);
     } else {
-      message = "Opz! Fim do mapa. Escolha outro caminho.";
+      message = "Oops! Fim do mapa. Escolha outro caminho.";
     }
   };
 
-
   return (
     <>
-        <ContainerButton  className="glow-on-hover">    
+      <ContainerButton className="glow-on-hover">
         <button className="arrow-button arrow-up" onClick={changeUp}></button>
         <button className="arrow-button arrow-down" onClick={changeDown}></button>
       </ContainerButton>
@@ -67,7 +85,3 @@ import { useWindowHeight } from '@react-hook/window-size';
 };
 
 export default ButtonHeroY;
-
-/**
- *       
- */
