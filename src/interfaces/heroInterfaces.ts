@@ -3,14 +3,10 @@ export interface IHeroProps {
   buttonRight: number;
   buttonDown: number;
   buttonUp: number;
+  transform: {
+    direction: 'left' | 'right',
+  };
 }
-
-
-/*
-export interface ButtonHeroProps {
-  onPositionUpdate: (buttonLeft: number, buttonRight: number, buttonDown: number,  buttonUp: number ) => void;
-}
-*/
 
 export interface ButtonHeroXProps {
   onPositionUpdateX: (buttonLeft: number, buttonRight: number ) => void;

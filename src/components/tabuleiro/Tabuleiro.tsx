@@ -5,15 +5,14 @@ import MiniDemon from '../mini.demon/MiniDemon'
 import Demon from '../demon/Demon'
 import Trap from '../trap/trap'
 import Chest from '../chest/chest'
-import { GAME_SIZE } from '@/settings/constants'
 import { IHeroProps } from '@/interfaces/heroInterfaces'
 
 
-const Tabuleiro: React.FC<IHeroProps> = ({buttonLeft, buttonRight, buttonDown, buttonUp}) => {
+const Tabuleiro: React.FC<IHeroProps> = ({buttonLeft, buttonRight, buttonDown, buttonUp, transform}) => {
 
   return (
     <TabuleiroContainer>
-      <Hero  buttonLeft={buttonLeft} buttonRight={buttonRight} buttonDown={buttonDown} buttonUp={buttonUp}/>
+      <Hero  buttonLeft={buttonLeft} buttonRight={buttonRight} buttonDown={buttonDown} buttonUp={buttonUp} transform={transform}/>
       <Trap />
       <Chest />
       <MiniDemon />
