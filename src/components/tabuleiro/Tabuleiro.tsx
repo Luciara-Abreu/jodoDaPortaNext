@@ -6,13 +6,14 @@ import Demon from '../demon/Demon'
 import Trap from '../trap/trap'
 import Chest from '../chest/chest'
 import { IHeroProps } from '@/interfaces/heroInterfaces'
+import { useEffect, useState } from 'react'
 
 
-const Tabuleiro: React.FC<IHeroProps> = ({buttonLeft, buttonRight, buttonDown, buttonUp, transform}) => {
-
+const Tabuleiro: React.FC<IHeroProps> = ({buttonLeft, buttonRight, buttonDown, buttonUp}) => {
+ 
   return (
     <TabuleiroContainer>
-      <Hero  buttonLeft={buttonLeft} buttonRight={buttonRight} buttonDown={buttonDown} buttonUp={buttonUp} transform={transform}/>
+      <Hero  buttonLeft={buttonLeft} buttonRight={buttonRight} buttonDown={buttonDown} buttonUp={buttonUp} />
       <Trap />
       <Chest />
       <MiniDemon />

@@ -1,25 +1,38 @@
-import { IHeroProps } from '@/interfaces/heroInterfaces';
+import React, { useState, useRef, useEffect } from 'react';
 import { HeroImage } from './styles';
+import { IHeroProps } from '@/interfaces/heroInterfaces';
 
-const Hero: React.FC<IHeroProps> = ({buttonLeft, buttonRight, buttonDown, buttonUp, transform  }) => {
-  const imageStyle = {    
-    left:   `${buttonLeft}px`,
-    right:  `${buttonRight}px`,
-    top:   `${buttonDown}px`,
+const Hero: React.FC<IHeroProps> = ({ buttonLeft, buttonRight, buttonDown, buttonUp }) => {
+  const buttonLeftRef = useRef(buttonLeft);
+  const [transform, setTransform] = useState('scaleX(1)');
+
+  useEffect(() => {
+    const isIncremented = buttonLeft > buttonLeftRef.current;
+    const isDecremented = buttonLeft < buttonLeftRef.current;
+    buttonLeftRef.current = buttonLeft;
+
+    if (isIncremented) {
+      console.log('Hero isIncremented ===> ', isIncremented);
+      setTransform('scaleX(1)');
+    } else {
+      console.log('Hero isDecremented ===> ', isDecremented);
+      setTransform('scaleX(-1)');
+    }
+  }, [buttonLeft]);
+
+  const imageStyle = {
+    left: `${buttonLeft}px`,
+    right: `${buttonRight}px`,
+    top: `${buttonDown}px`,
     bottom: `${buttonUp}px`,
-    transform: transform && transform.direction === 'right' ? 'scaleX(1)' : 'scaleX(-1)',    
+    transform: transform,
   };
-  
-  console.log('HERO TRANSFORM ', transform);  
-  
+
   return (
     <>
-      <HeroImage style={imageStyle}/>
+      <HeroImage style={imageStyle} />
     </>
   );
 };
 
-export default Hero
-
-
-//    transform: transform ? `scaleX(${direction === 'left' ? -1 : 1}) : 'scaleX(1)`,
+export default Hero;

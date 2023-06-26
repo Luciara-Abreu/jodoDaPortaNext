@@ -3,9 +3,6 @@ export interface IHeroProps {
   buttonRight: number;
   buttonDown: number;
   buttonUp: number;
-  transform: {
-    direction: 'left' | 'right',
-  };
 }
 
 export interface ButtonHeroXProps {
