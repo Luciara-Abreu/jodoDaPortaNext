@@ -15,7 +15,6 @@ const ButtonHeroY: React.FC<ButtonHeroYProps> = ({ onPositionUpdateY }) => {
   let message = "";
 
   const { height: windowHeight } = useWindowDimensions();
-  console.log(windowHeight)
 
 
   useEffect(() => {
@@ -46,9 +45,6 @@ const ButtonHeroY: React.FC<ButtonHeroYProps> = ({ onPositionUpdateY }) => {
     const upperLimit = POSITION_TOP;
     const lowerLimit = endOfTheMapaY;
 
-    console.log('Down upperLimit', upperLimit);
-    console.log('Down lowerLimit', lowerLimit);
-
     if (newButtonTop >= upperLimit && newButtonTop <= lowerLimit) {
       setButtonTop(newButtonTop);
       onPositionUpdateY(newButtonTop, buttonUp);
@@ -61,9 +57,6 @@ const ButtonHeroY: React.FC<ButtonHeroYProps> = ({ onPositionUpdateY }) => {
     const newButtonTop = buttonTop - stepDownUp;
     const upperLimit = POSITION_TOP;
     const lowerLimit = endOfTheMapaY;
-
-    console.log('Up upperLimit', upperLimit);
-    console.log('Up lowerLimit', lowerLimit);
 
     if (newButtonTop >= upperLimit && newButtonTop <= lowerLimit) {
       setButtonTop(newButtonTop);
