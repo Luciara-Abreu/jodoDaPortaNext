@@ -10,10 +10,8 @@ useEffect(() => {
   buttonLeftRef.current = buttonLeft;
 
   if (isIncremented) {
-    console.log('Hero isIncremented ===> ', isIncremented);
-    setTransform('scaleX(1)');
+     setTransform('scaleX(1)');
   } else {
-    console.log('Hero isDecremented ===> ', isDecremented);
     setTransform('scaleX(-1)');
   }
 }, [buttonLeft]);
