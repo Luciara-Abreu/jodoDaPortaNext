@@ -18,6 +18,7 @@ const HeroImage = styled.div`
   background-repeat: no-repeat;
   background-position: 0 ${-30}px;
   animation: hero-animation 1s steps(4) infinite;
+  z-index: 1; // profundidade 1 ou seja ele está com prioridade entre outros elementos
 
   @media (max-width: 767px) {   
   position: absolute;
