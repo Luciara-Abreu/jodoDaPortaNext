@@ -8,7 +8,7 @@ const Demon = () => {
 
   const imageStyle = {
     bottom: `${moviment.position.y + 5 * TILE_SIZE}px`,
-    left: `${moviment.position.x * TILE_SIZE}px`,
+    left: `${moviment.position.x + 8 * TILE_SIZE}px`,
     transform: `scaleX(${moviment.direction === EDirection.RIGHT ? 1 : -1})`,
   };
   return (
