@@ -8,11 +8,11 @@ function EndOfMapaState() {
 
   useEffect(() => {
     const updateEndOfMapa = () => {
-      if (endOfMapaX >= 10 && endOfMapaX <= width - 100) {
+      if (endOfMapaX >= 10 && endOfMapaX <= width) {
         setEndOfMapaX(endOfMapaX);
       }
 
-      if (endOfMapaY >= 10 && endOfMapaY <= height - 100) {
+      if (endOfMapaY >= 10 && endOfMapaY <= height) {
         setEndOfMapaY(endOfMapaY);
       }
     };
