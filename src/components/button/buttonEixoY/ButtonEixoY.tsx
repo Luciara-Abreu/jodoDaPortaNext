@@ -3,14 +3,15 @@ import { ContainerButton } from "./styles";
 import { POSITION_UP, POSITION_TOP } from '@/settings/constants';
 import Message from '../../message/mensage';
 import { ButtonHeroYProps } from '@/interfaces/heroInterfaces';
-import useWindowDimensions from '@/path/hook/windownsDimension';
+import useWindowDimensions from '@/hook/useWindowsDimension';
+
 
 const ButtonHeroY: React.FC<ButtonHeroYProps> = ({ onPositionUpdateY }) => {
   const [buttonUp, setButtonUp] = useState(POSITION_UP);
   const [buttonTop, setButtonTop] = useState(10);
   const [stepDownUp, setStepDownUp] = useState(27);
   const [updateMapaY, setUpdateMapaY] = useState(442);
-  const [endOfTheMapaY, setEndOfTheMapaY] = useState(1055); // Variável adicionada
+  const [endOfTheMapaY, setEndOfTheMapaY] = useState(1055); 
 
   let message = "";
 

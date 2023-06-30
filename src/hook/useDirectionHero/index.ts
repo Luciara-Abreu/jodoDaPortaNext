@@ -10,7 +10,7 @@ useEffect(() => {
   buttonLeftRef.current = buttonLeft;
 
   if (isIncremented) {
-     setTransform('scaleX(1)');
+    setTransform('scaleX(1)');
   } else {
     setTransform('scaleX(-1)');
   }

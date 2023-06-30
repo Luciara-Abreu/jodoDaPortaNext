@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 
 
-//seWindowDimensions, que é uma função personalizada que retorna o tamanho da janela
+//função personalizada que retorna o tamanho da janela
 const useWindowDimensions = () => {
   const isClient = typeof window === 'object';
 

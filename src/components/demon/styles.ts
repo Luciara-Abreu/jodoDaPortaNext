@@ -1,4 +1,3 @@
-import { TILE_SIZE } from '@/settings/constants'
 import styled from 'styled-components'
 
 const DemonImage = styled.div`
@@ -12,8 +11,6 @@ const DemonImage = styled.div`
   }
 
   position: absolute;
-  bottom: ${28 * 10}px;
-  left: ${49 * 15}px;
   width: ${80}px;
   height: ${48 * 2}px;
   background-image: url(/images/demon.png);

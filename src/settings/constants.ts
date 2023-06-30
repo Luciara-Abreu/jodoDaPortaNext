@@ -10,4 +10,12 @@ export const POSITION_LEFT = 10     // do 3 ao  21 / do 156 ao 174
 
 export const FIM_DO_MAPA_X = 922
 export const FIM_DO_MAPA_Y = 442
+//***********************************************************/
+
+export enum EDirection {
+  LEFT = "ArrowLeft",
+  RIGHT = "ArrowRight",
+  UP = "ArrowUp",
+  DOWN = "ArrowDown"
+}
 

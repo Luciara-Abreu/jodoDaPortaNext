@@ -1,7 +1,8 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React from 'react';
 import { HeroImage } from './styles';
 import { IHeroProps } from '@/interfaces/heroInterfaces';
-import useDirection from '@/hoocks/useDirection';
+import useDirection from '@/hook/useDirectionHero';
+
 
 const Hero: React.FC<IHeroProps> = ({ buttonLeft, buttonRight, buttonDown, buttonUp }) => {
   const transform = useDirection(buttonLeft); 
