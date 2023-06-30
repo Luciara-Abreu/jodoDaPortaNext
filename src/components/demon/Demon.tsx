@@ -1,20 +1,14 @@
 import { DemonImage } from "./styles";
 import useMovementMonsters from "@/hook/useMovementMonsters";
-import { IiPositionProps } from "@/interfaces/movement";
-import { EDirection } from "@/settings/constants";
 
-const initialPositionDemon = {
-  x: 15 * 10,
-  y: 5 * 10,
-};
-const Demon = (initialPositionDemon: IiPositionProps) => {
-  const moviment = useMovementMonsters(initialPositionDemon);
-  const bottom = moviment.position.y;
-  const left = moviment.position.x;
+import { EDirection, TILE_SIZE } from "@/settings/constants";
+
+const Demon = () => {
+  const moviment = useMovementMonsters();
 
   const imageStyle = {
-    bottom: `${bottom}px`,
-    left: `${left}px`,
+    bottom: `${moviment.position.y * TILE_SIZE}px`,
+    left: `${moviment.position.x * TILE_SIZE}px`,
     transform: `scaleX(${moviment.direction === EDirection.RIGHT ? 1 : -1})`,
   };
   return (
