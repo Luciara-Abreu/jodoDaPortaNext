@@ -5,7 +5,7 @@ import { handleNextMoviment } from "@/context/canvas/helpers";
 
 
 const initialPositionDemon = {
-  x: 15,
+  x: 5,
   y: 5,
 };
 
