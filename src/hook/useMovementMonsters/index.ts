@@ -3,7 +3,6 @@ import { useEffect, useState } from "react";
 import { EDirection } from "@/settings/constants";
 import { handleNextMoviment } from "@/context/canvas/helpers";
 
-
 const initialPositionDemon = {
   x: 5,
   y: 5,
@@ -13,6 +12,7 @@ function useMovementMonsters() {
   const [position, setPosition] = useState(initialPositionDemon);
   const [direction, setDirection] = useState(EDirection.RIGHT);
 
+  /*
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key === EDirection.LEFT) {
@@ -32,8 +32,9 @@ function useMovementMonsters() {
 
     return () => {
       window.removeEventListener("keydown", handleKeyDown);
+      
     };
-  }, []);
+  }, []);*/
 
   useInterval(() => {
     const random = Math.floor(Math.random() * 4);
