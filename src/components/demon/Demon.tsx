@@ -1,10 +1,13 @@
 import { DemonImage } from "./styles";
 import useMovementMonsters from "@/hook/useMovementMonsters";
-
 import { EDirection, TILE_SIZE } from "@/settings/constants";
 
-const Demon = () => {
-  const moviment = useMovementMonsters();
+interface IProps {
+  initialPosition: { x: number; y: number };
+}
+
+const Demon = (props: IProps) => {
+  const moviment = useMovementMonsters(props);
 
   const imageStyle = {
     bottom: `${moviment.position.y * TILE_SIZE}px`,
