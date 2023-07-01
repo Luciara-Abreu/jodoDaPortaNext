@@ -11,17 +11,12 @@ import { IHeroProps } from "@/interfaces/heroInterfaces";
 const Tabuleiro: React.FC<IHeroProps> = ({buttonLeft, buttonRight, buttonDown, buttonUp}) => {
   return (
     <TabuleiroContainer>
-      <Hero
-        buttonLeft={buttonLeft}
-        buttonRight={buttonRight}
-        buttonDown={buttonDown}
-        buttonUp={buttonUp}
-      />
+      <Hero  buttonLeft={buttonLeft} buttonRight={buttonRight} buttonDown={buttonDown} buttonUp={buttonUp}/>
       <Chest />
       <Trap />
       <MiniDemon initialPosition={{ y: 7, x: 5 }} />
       <MiniDemon initialPosition={{ y: 5, x: 17 }} />
-      <MiniDemon initialPosition={{ y: 2, x: 8 }} />
+      <MiniDemon initialPosition={{ y: 3, x: 3 }} />
       <Demon initialPosition={{ y: 3, x: 10 }} />
       <Image
         src="/images/tileset.gif"
