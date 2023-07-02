@@ -2,15 +2,8 @@ import useInterval from "react-useinterval";
 import { useState } from "react";
 import { EDirection } from "@/settings/constants";
 import { handleNextMoviment } from "@/context/canvas/helpers";
+import { IProps } from "@/interfaces/movement";
 
-interface IProps {
-  initialPosition: { x: number; y: number };
-}
-
-const initialPositionDemon = {
-  x: 5,
-  y: 5,
-};
 
 function useMovementMonsters(props: IProps) {
   const [position, setPosition] = useState(props.initialPosition);
@@ -36,6 +29,12 @@ function useMovementMonsters(props: IProps) {
 }
 
 export default useMovementMonsters;
+
+
+
+
+
+
 
 /*
   useEffect(() => {

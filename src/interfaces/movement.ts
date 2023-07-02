@@ -4,3 +4,7 @@ export interface IMovementProps {
   x: number;
 }
 
+
+export interface IProps {
+  initialPosition: { x: number; y: number };
+}
