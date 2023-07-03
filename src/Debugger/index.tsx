@@ -1,6 +1,5 @@
 import { IProps } from "@/interfaces/movement";
 import Tile from "./Tale";
-import ContainerDebugger from "./styles";
 import { Canvas } from "@/context/canvas/helpers";
 
 function getCanvasMap() {
@@ -15,7 +14,7 @@ function getCanvasMap() {
       const position = { x: x, y: y };
       const text = Canvas[y][x] | canvasYX;
 
-      tilesArray.push(<Tile initialPosition={{ x: 0.9, y: 1 }} text={text} />);
+      tilesArray.push(<Tile initialPosition={{ x: 1, y: 1 }} text={text} />);
     }
   }
   return tilesArray;
@@ -23,7 +22,13 @@ function getCanvasMap() {
 
 function Debugger(props: IProps) {
   const tiles = getCanvasMap();
-  return <ContainerDebugger>{tiles}</ContainerDebugger>;
+  return (
+    <div>
+      <Tile initialPosition={{ x: 0, y: 1 }} />;
+      <Tile initialPosition={{ x: 0, y: 2 }} />;
+      <Tile initialPosition={{ x: 0, y: 3 }} />;
+    </div>
+  );
 }
 
 export default Debugger;

@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
 const ChestImage = styled.div`
   @keyframes chest-animation {
@@ -11,13 +11,13 @@ const ChestImage = styled.div`
   }
 
   position: absolute;
-  bottom: ${20 * 9}px;
+  bottom: ${95 * 2}px;
   left: ${24 * 10}px;
   width: ${48}px;
   height: 50px;
   background-image: url(/images/chest.png);
   background-repeat: no-repeat;
   animation: chest-animation 1s steps(3) infinite;
-`
+`;
 
-export { ChestImage }
+export { ChestImage };

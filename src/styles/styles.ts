@@ -8,7 +8,7 @@ const ContainerApp = styled.div`
   justify-content: center;
   align-items: center;
   background: #282c34;
-  position: absolute;
+  position: relative;
   margin: 0;
   padding: 0;
 
