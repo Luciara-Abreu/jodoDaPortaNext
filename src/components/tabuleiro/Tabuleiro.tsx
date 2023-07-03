@@ -25,8 +25,6 @@ const Tabuleiro: React.FC<IHeroProps> = ({
       <Chest />
       <Trap />
       <MiniDemon initialPosition={{ y: 7, x: 5 }} />
-      <MiniDemon initialPosition={{ y: 5, x: 17 }} />
-      <MiniDemon initialPosition={{ y: 3, x: 3 }} />
       <Demon initialPosition={{ y: 3, x: 10 }} />
       <Image
         src="/images/tileset.gif"
@@ -40,3 +38,8 @@ const Tabuleiro: React.FC<IHeroProps> = ({
   );
 };
 export default Tabuleiro;
+
+/**
+ *    <MiniDemon initialPosition={{ y: 5, x: 17 }} />
+      <MiniDemon initialPosition={{ y: 3, x: 3 }} />
+ */

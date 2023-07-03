@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
 const TrapImage = styled.div`
   @keyframes trap-animation {
@@ -13,12 +13,11 @@ const TrapImage = styled.div`
   position: absolute;
   bottom: ${21 * 5}px;
   left: ${42 * 8}px;
-  width: ${48}px;
-  height: 50px;
+  width: 47px;
+  height: 36px;
   background-image: url(/images/trap.png);
   background-repeat: no-repeat;
-  //background-position: 0 ${-35}px;
   animation: trap-animation 1s steps(4) infinite;
-`
+`;
 
-export { TrapImage }
+export { TrapImage };

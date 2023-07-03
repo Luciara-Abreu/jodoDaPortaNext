@@ -37,9 +37,6 @@ export default function Home() {
 
   return (
     <ContainerApp>
-      <>
-        <h1>Bem vindo ao jogo.</h1>
-      </>
       <Body>
         <div className="button-hero">
           <div>
@@ -60,3 +57,9 @@ export default function Home() {
     </ContainerApp>
   );
 }
+
+/**
+ *       <>
+        <h1>Bem vindo ao jogo.</h1>
+      </>
+ */
