@@ -24,7 +24,7 @@ function Debugger(props: IProps) {
   const tiles = getCanvasMap();
   return (
     <div>
- {tiles}
+      {tiles}
     </div>
   );
 }

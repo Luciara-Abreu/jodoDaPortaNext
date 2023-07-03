@@ -11,7 +11,7 @@ const TrapImage = styled.div`
   }
 
   position: absolute;
-  bottom: ${21 * 5}px;
+  top: ${21 * 5}px;
   left: ${42 * 8}px;
   width: 47px;
   height: 36px;

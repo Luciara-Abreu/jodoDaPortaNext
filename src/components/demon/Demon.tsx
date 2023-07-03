@@ -8,7 +8,7 @@ const Demon = (props: IProps) => {
   const moviment = useMovementMonsters(props);
 
   const imageStyle = {
-    bottom: `${moviment.position.y * TILE_SIZE}px`,
+    top: `${moviment.position.y * TILE_SIZE}px`,
     left: `${moviment.position.x * TILE_SIZE}px`,
     transform: `scaleX(${moviment.direction === EDirection.RIGHT ? 1 : -1})`,
   };

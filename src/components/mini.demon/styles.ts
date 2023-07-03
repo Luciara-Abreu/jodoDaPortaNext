@@ -11,7 +11,7 @@ const MiniDemonImage = styled.div`
   }
 
   position: absolute;
-  bottom: ${28 * 1}px;
+  top: ${28 * 1}px;
   left: ${49 * 10}px;
   width: ${48}px;
   height: 65px;
