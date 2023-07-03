@@ -8,13 +8,13 @@ function getCanvasMap() {
   for (let y = 0; y < Canvas.length; y++) {
     const canvasY = Canvas[y];
 
-    for (let x = 0; x < Canvas.length; x++) {
+    for (let x = 0; x < canvasY.length; x++) {
       const canvasYX = canvasY[x];
 
       const position = { x: x, y: y };
-      const text = Canvas[y][x] | canvasYX;
+      const text = Canvas[y][x] || canvasYX;
 
-      tilesArray.push(<Tile initialPosition={{ x: 1, y: 1 }} text={text} />);
+      tilesArray.push(<Tile initialPosition={position} text={text} />);
     }
   }
   return tilesArray;
@@ -24,11 +24,16 @@ function Debugger(props: IProps) {
   const tiles = getCanvasMap();
   return (
     <div>
-      <Tile initialPosition={{ x: 0, y: 1 }} />;
-      <Tile initialPosition={{ x: 0, y: 2 }} />;
-      <Tile initialPosition={{ x: 0, y: 3 }} />;
+ {tiles}
     </div>
   );
 }
 
 export default Debugger;
+
+
+/**
+ *      <Tile initialPosition={{ x: 5, y: 5 }} />;
+      <Tile initialPosition={{ x: 5, y: 6 }} />;
+      <Tile initialPosition={{ x: 5, y: 7 }} />;
+ */
