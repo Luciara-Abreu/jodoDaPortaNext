@@ -1,7 +1,7 @@
 import useMovementMonsters from "@/hook/useMovementMonsters";
 import { MiniDemonImage } from "./styles";
 import { EDirection, TILE_SIZE } from "@/settings/constants";
-import { IProps } from "@/interfaces/movement";
+import { IProps } from "@/interfaces/IMoviment";
 
 const MiniDemon = (props: IProps) => {
   const moviment = useMovementMonsters(props);

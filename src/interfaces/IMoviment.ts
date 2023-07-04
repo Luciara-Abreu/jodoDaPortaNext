@@ -6,7 +6,10 @@ export interface IMovementProps {
 
 
 export interface IProps {
-  initialPosition: { x: number; y: number };
+  initialPosition: 
+  { x: number; 
+    y: number;
+  };
   text: number;
 }
 

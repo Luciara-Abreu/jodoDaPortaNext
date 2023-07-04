@@ -1,14 +1,12 @@
-import { IProps } from "@/interfaces/movement";
+import { IProps } from "@/interfaces/IMoviment";
 
-
-function UseTileCollor(props: IProps){
-switch(props.text){
-  case 0:
-    return 'yellow';
-  case 1:
-    return 'red';
-}  
+function UseTileCollor(props: IProps) {
+  switch (props.text) {
+    case 0:
+      return "yellow";
+    case 1:
+      return "red";
+  }
 }
 
-export default UseTileCollor
-
+export default UseTileCollor;
