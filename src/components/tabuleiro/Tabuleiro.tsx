@@ -24,8 +24,8 @@ const Tabuleiro: React.FC<IHeroProps> = ({
       />
       <Chest />
       <Trap />
-      <MiniDemon initialPosition={{ y: 7, x: 5 }} />
-      <Demon initialPosition={{ y: 3, x: 10 }} />
+      <MiniDemon key="miniDemon" initialPosition={{ y: 7, x: 5 }} text={0} />
+      <Demon key="demon" initialPosition={{ y: 3, x: 10 }} text={0} />
       <Image
         src="/images/tileset.gif"
         alt="tabuleiro do jogo"
@@ -33,7 +33,7 @@ const Tabuleiro: React.FC<IHeroProps> = ({
         height={0}
         className="image-tabuleiro"
       />
-      <Debugger initialPosition={{ x: 0, y: 0 }} />
+      <Debugger key="debugger" initialPosition={{ x: 0, y: 0 }} text={0} />
     </TabuleiroContainer>
   );
 };

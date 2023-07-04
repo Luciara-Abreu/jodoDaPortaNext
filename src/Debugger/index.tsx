@@ -14,7 +14,9 @@ function getCanvasMap() {
       const position = { x: x, y: y };
       const text = Canvas[y][x] || canvasYX;
 
-      tilesArray.push(<Tile initialPosition={position} text={text} />);
+      tilesArray.push(
+        <Tile key="tile" initialPosition={position} text={text} />
+      );
     }
   }
   return tilesArray;
@@ -22,15 +24,10 @@ function getCanvasMap() {
 
 function Debugger(props: IProps) {
   const tiles = getCanvasMap();
-  return (
-    <div>
-      {tiles}
-    </div>
-  );
+  return <div>{tiles}</div>;
 }
 
 export default Debugger;
-
 
 /**
  *      <Tile initialPosition={{ x: 5, y: 5 }} />;
