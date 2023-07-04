@@ -1,4 +1,4 @@
-import { IProps } from "@/interfaces/IMoviment";
+import { IProps } from "@/interfaces";
 
 function UseTileCollor(props: IProps) {
   switch (props.text) {

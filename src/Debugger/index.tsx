@@ -1,4 +1,4 @@
-import { IProps } from "@/interfaces/IMoviment";
+import { IProps } from "@/interfaces";
 import Tile from "./Tale";
 import { Canvas } from "@/context/canvas/helpers";
 

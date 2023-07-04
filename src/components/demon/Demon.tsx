@@ -1,6 +1,6 @@
 import { DemonImage } from "./styles";
 import useMovementMonsters from "@/hook/useMovementMonsters";
-import { IProps } from "@/interfaces/IMoviment";
+import { IProps } from "@/interfaces";
 import { EDirection, TILE_SIZE } from "@/settings/constants";
 
 const Demon = (props: IProps) => {

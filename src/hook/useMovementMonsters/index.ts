@@ -2,7 +2,7 @@ import useInterval from "react-useinterval";
 import { useState } from "react";
 import { EDirection } from "@/settings/constants";
 import { handleNextMoviment } from "@/context/canvas/helpers";
-import { IProps } from "@/interfaces/IMoviment";
+import { IProps } from "@/interfaces";
 
 function useMovementMonsters(props: IProps) {
   const [position, setPosition] = useState(props.initialPosition);
@@ -19,7 +19,7 @@ function useMovementMonsters(props: IProps) {
       setDirection(randomDirection);
       console.log("Executou");
     }
-  }, 2000);
+  }, 20000);
 
   return {
     position,

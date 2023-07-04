@@ -1,7 +1,11 @@
-import { IMovementProps } from "@/interfaces/IMoviment";
+import { IMovementProps, IProps } from "@/interfaces";
 import { EDirection } from "@/settings/constants";
 
-export function handleNextMoviment( direction: string, position: IMovementProps) {
+export function handleNextMoviment(
+  direction: string,
+  position: IMovementProps
+) {
+  console.log('position in Helpers ==> ',position.x,position.y);
   switch (direction) {
     case EDirection.LEFT:
       return { x: position.x - 1, y: position.y };

@@ -1,4 +1,4 @@
-import { IProps } from "@/interfaces/IMoviment";
+import { IProps } from "@/interfaces";
 import ContainerTile from "./styles";
 import { TILE_SIZE } from "@/settings/constants";
 import UseTileCollor from "@/hook/useTileCollor";
