@@ -6,8 +6,8 @@ const TabuleiroContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  left: 25%;
-  top:0px;
+  //left: 25%;
+  top: 0px;
 
   .image-tabuleiro {
     width: ${GAME_SIZE}px;
@@ -19,11 +19,11 @@ const TabuleiroContainer = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    top: 95%;
+    top: 30%;
 
     .image-tabuleiro {
       width: ${TILE_SIZE * 27}px;
-      height: 1200px;
+      height: ${TILE_SIZE * 27}px;    
     }
   }
 `;

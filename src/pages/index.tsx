@@ -5,20 +5,19 @@ import Tabuleiro from "@/components/tabuleiro/Tabuleiro";
 import ButtonHeroX from "@/components/button/buttonEixoX/ButtonEixoX";
 import ButtonHeroY from "@/components/button/buttonEixoY/ButtonEixoY";
 import useButtonPositions from "@/hook/useButtonPosition";
+import useScreenSize from "@/hook/useScreenSize";
 
 export default function Home() {
-  const {
-    buttonLeft,
-    buttonRight,
-    buttonDown,
-    buttonUp,
-    handlePositionUpdateX,
-    handlePositionUpdateY,
-  } = useButtonPositions();
+
+  const isSmallScreen = useScreenSize(767);
+
+  const {buttonLeft,buttonRight,buttonDown, buttonUp,handlePositionUpdateX,
+    handlePositionUpdateY,  } = useButtonPositions();
 
   return (
     <ContainerApp>
       <Body>
+        {isSmallScreen ? 
         <div className="button-hero">
           <div>
             <ButtonHeroX onPositionUpdateX={handlePositionUpdateX} />
@@ -27,12 +26,14 @@ export default function Home() {
             <ButtonHeroY onPositionUpdateY={handlePositionUpdateY} />
           </div>
         </div>
+        :
         <Tabuleiro
           buttonLeft={buttonLeft}
           buttonRight={buttonRight}
           buttonDown={buttonDown}
           buttonUp={buttonUp}
         />
+}
       </Body>
       <Footer />
     </ContainerApp>
@@ -40,7 +41,5 @@ export default function Home() {
 }
 
 /**
- *       <>
-        <h1>Bem vindo ao jogo.</h1>
-      </>
+    
  */
