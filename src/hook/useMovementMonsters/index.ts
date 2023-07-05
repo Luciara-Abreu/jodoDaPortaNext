@@ -19,7 +19,7 @@ function useMovementMonsters(props: IProps) {
       setDirection(randomDirection);
       console.log("Executou");
     }
-  }, 20000);
+  }, 2000);
 
   return {
     position,

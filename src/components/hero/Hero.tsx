@@ -1,30 +1,35 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { HeroImage } from "./styles";
 import useDirection from "@/hook/useDirectionHero";
-import useMovementMonsters from "@/hook/useMovementMonsters";
-import { TILE_SIZE, EDirection } from "@/settings/constants";
-import { CombinedProps } from "@/interfaces";
+import { IHeroProps } from "@/interfaces";
 import useScreenSize from "@/hook/useScreenSize";
+import { TILE_SIZE, EDirection } from "@/settings/constants";
+import useMovementHero from "@/hook/useMovementHero";
 
-const Hero: React.FC<CombinedProps> = ({
+const initialPosition = {
+  y: 1,
+  x: 1,
+};
+
+const Hero: React.FC<IHeroProps> = ({
   buttonLeft,
   buttonRight,
   buttonDown,
   buttonUp,
-  initialPosition,
-  text,
 }) => {
+  const [position, setPosition] = useState(initialPosition);
+  const [direction, setDirection] = useState(EDirection.RIGHT);
+
   const transform = useDirection(buttonLeft);
-  const moviment = useMovementMonsters({ initialPosition, text });
   const isSmallScreen = useScreenSize(768);
+  const movi = useMovementHero();
 
-  console.log("moviment Hero ==> ", moviment.position.y, moviment.position.x);
-
-  const movimentKeyboard = {
-    /*left: `${moviment.position.x * TILE_SIZE}px`,
-    top: `${moviment.position.y * TILE_SIZE}px`,
-    transform: `scaleX(${moviment.direction === EDirection.RIGHT ? 1 : -1})`,*/
+   const movimentKeyboard = {
+    bottom: `${movi.position.y * TILE_SIZE}px`,
+    left: `${movi.position.x * TILE_SIZE}px`,
+    transform: `scaleX(${movi.direction === EDirection.RIGHT ? 1 : -1})`,
   };
+  console.log("Hero ==> ", movimentKeyboard);
 
   const movimentButton = {
     left: `${buttonLeft}px`,
@@ -36,9 +41,10 @@ const Hero: React.FC<CombinedProps> = ({
 
   return (
     <>
-      <HeroImage style={isSmallScreen ? movimentButton : movimentKeyboard} />
+      <HeroImage style={movimentKeyboard} />
     </>
   );
 };
 
 export default Hero;
+//  <HeroImage style={isSmallScreen ? movimentButton : movimentKeyboard} />

@@ -11,8 +11,6 @@ const MiniDemonImage = styled.div`
   }
 
   position: absolute;
-  top: ${28 * 1}px;
-  left: ${49 * 10}px;
   width: ${48}px;
   height: 65px;
   background-image: url(/images/mini-demon.png);

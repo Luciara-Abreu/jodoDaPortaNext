@@ -1,24 +1,37 @@
-/**
-import useInterval from "react-useinterval";
-import { useState } from "react";
-import { EDirection } from "@/settings/constants"; * 
- * 
- function useMovementKeyboard(initialPosition: { y: number; x: number }) {
+import { useEffect, useState } from "react";
+import { EDirection } from "@/settings/constants";
+
+const initialPosition = {
+  y: 1,
+  x: 1,
+};
+
+function useMovementHero() {
   const [position, setPosition] = useState(initialPosition);
   const [direction, setDirection] = useState(EDirection.RIGHT);
 
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key === EDirection.LEFT) {
-        setPosition({ x: position.x - 1, y: position.y });
+        const newState = { x: position.x - 1, y: position.y };
+        setPosition(newState);
         setDirection(EDirection.LEFT);
+
+        console.log("event", event, position);
       } else if (event.key === EDirection.RIGHT) {
-        setPosition({ x: position.x + 1, y: position.y });
+        const newState = { x: position.x + 1, y: position.y };
+        setPosition(newState);
         setDirection(EDirection.RIGHT);
-      } else if (event.key === EDirection.DOWN) {
-        setPosition({ x: position.x, y: position.y - 1 });
+
+        console.log("event", event, position);
       } else if (event.key === EDirection.UP) {
-        setPosition({ x: position.x, y: position.y + 1 });
+        const newState = { x: position.x, y: position.y + 1 };
+        setPosition(newState);
+        console.log("event", event, position);
+      } else if (event.key === EDirection.DOWN) {
+        const newState = { x: position.x, y: position.y - 1 };
+        setPosition(newState);
+        console.log("event", event, position);
       }
     };
 
@@ -27,8 +40,9 @@ import { EDirection } from "@/settings/constants"; *
     return () => {
       window.removeEventListener("keydown", handleKeyDown);
     };
-  }, []);
+  }, [position]);
 
   return { position, direction };
 }
- */
+
+export default useMovementHero;

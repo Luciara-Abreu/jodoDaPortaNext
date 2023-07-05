@@ -29,8 +29,3 @@ function Debugger(props: IProps) {
 
 export default Debugger;
 
-/**
- *      <Tile initialPosition={{ x: 5, y: 5 }} />;
-      <Tile initialPosition={{ x: 5, y: 6 }} />;
-      <Tile initialPosition={{ x: 5, y: 7 }} />;
- */
