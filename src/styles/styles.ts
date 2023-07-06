@@ -22,7 +22,7 @@ const ContainerApp = styled.div`
     margin: 0;
     padding: 0;
     width: 394%;
-    height: 390vh;
+    height: 286vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -48,13 +48,13 @@ const Body = styled.div`
 
   .button-hero {
     position: absolute;
-    left: 8%; /* Alinha horizontalmente ao centro */
+    left: 0%; /* Alinha horizontalmente ao centro */
     transform: translateX(-50%); /* Centraliza horizontalmente */
   }
 
   @media (max-width: 767px) {
     width: 100%;
-    height: 372vh;
+    height: 100%;
     margin: 0;
     padding: 0;
     display: flex;
@@ -63,8 +63,8 @@ const Body = styled.div`
 
     .button-hero {
       position: absolute;
-      top: 265%;
-      left: 140%; /* Alinha horizontalmente ao centro */
+      top: 60%;
+      left: 20%; /* Alinha horizontalmente ao centro */
       transform: translateX(-50%); /* Centraliza horizontalmente */
     }
   }

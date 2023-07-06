@@ -1,4 +1,4 @@
-import { TILE_SIZE, GAME_SIZE } from "@/settings/constants";
+import { GAME_SIZE } from "@/settings/constants";
 import styled from "styled-components";
 
 const TabuleiroContainer = styled.div`
@@ -6,7 +6,6 @@ const TabuleiroContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  //left: 25%;
   top: 0px;
 
   .image-tabuleiro {
@@ -19,12 +18,13 @@ const TabuleiroContainer = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    top: 30%;
+    top: 15%;
+    left: 0;
 
     .image-tabuleiro {
-      width: ${TILE_SIZE * 27}px;
-      height: ${TILE_SIZE * 27}px;    
-    }
+    width: ${GAME_SIZE}px;
+    height: ${GAME_SIZE}px;
+  }
   }
 `;
 

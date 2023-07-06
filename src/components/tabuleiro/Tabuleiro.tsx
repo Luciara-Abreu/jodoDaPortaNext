@@ -12,18 +12,16 @@ const Tabuleiro: React.FC<IHeroProps> = ({buttonLeft,buttonRight, buttonDown, bu
   return (
     <TabuleiroContainer>
       <Hero
-        /*buttonLeft={buttonLeft}
+        buttonLeft={buttonLeft}
         buttonRight={buttonRight}
         buttonDown={buttonDown}
-        buttonUp={buttonUp}  */    
+        buttonUp={buttonUp}  
       />
       <Chest />
       <Trap />
       <MiniDemon key="miniDemon" initialPosition={{ y: 7, x: 5 }} text={0} />
       <Demon key="demon" initialPosition={{ y: 3, x: 10 }} text={0} />
-      <Image
-        src="/images/tileset.gif"
-        alt="tabuleiro do jogo"
+      <Image  src="/images/tileset.gif" alt="tabuleiro do jogo"
         width={0}
         height={0}
         className="image-tabuleiro"

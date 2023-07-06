@@ -10,35 +10,47 @@ import useScreenSize from "@/hook/useScreenSize";
 export default function Home() {
   const isSmallScreen = useScreenSize(767);
 
-  const {buttonLeft,buttonRight,buttonDown, buttonUp,handlePositionUpdateX,
-    handlePositionUpdateY,  } = useButtonPositions();
+  const {
+    buttonLeft,
+    buttonRight,
+    buttonDown,
+    buttonUp,
+    handlePositionUpdateX,
+    handlePositionUpdateY,
+  } = useButtonPositions();
 
   return (
     <ContainerApp>
       <Body>
-        {isSmallScreen ? 
-        <div className="button-hero">
-          <div>
-            <ButtonHeroX onPositionUpdateX={handlePositionUpdateX} />
-          </div>
-          <div>
-            <ButtonHeroY onPositionUpdateY={handlePositionUpdateY} />
-          </div>
-        </div>
-        :
-        <Tabuleiro
-          buttonLeft={buttonLeft}
-          buttonRight={buttonRight}
-          buttonDown={buttonDown}
-          buttonUp={buttonUp}
-        />
-}
+        {isSmallScreen ? (
+          <>
+            <div className="button-hero">
+              <div>
+                <ButtonHeroX onPositionUpdateX={handlePositionUpdateX} />
+              </div>
+              <div>
+                <ButtonHeroY onPositionUpdateY={handlePositionUpdateY} />
+              </div>
+            </div>
+            <Tabuleiro
+              buttonLeft={buttonLeft}
+              buttonRight={buttonRight}
+              buttonDown={buttonDown}
+              buttonUp={buttonUp}
+            />
+          </>
+        ) : (
+          <>
+            <Tabuleiro
+              buttonLeft={buttonLeft}
+              buttonRight={buttonRight}
+              buttonDown={buttonDown}
+              buttonUp={buttonUp}
+            />
+          </>
+        )}
       </Body>
       <Footer />
     </ContainerApp>
   );
 }
-
-/**
-    
- */
