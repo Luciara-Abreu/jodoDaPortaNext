@@ -2,8 +2,9 @@ import { useEffect, useState } from 'react';
 import { ContainerButton } from './styles';
 import { POSITION_RIGHT, POSITION_LEFT } from '@/settings/constants';
 import Message from '../../message/mensage';
-import { ButtonHeroXProps } from '@/interfaces/heroInterfaces';
 import { useWindowWidth } from '@react-hook/window-size';
+import { ButtonHeroXProps } from '@/interfaces';
+
 
 const ButtonHeroX: React.FC<ButtonHeroXProps> = ({ onPositionUpdateX }) => {
   const [buttonLeft, setButtonLeft] = useState(POSITION_LEFT);

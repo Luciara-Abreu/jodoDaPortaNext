@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { HeroImage } from "./styles";
 import useDirection from "@/hook/useDirectionHero";
 import { IHeroProps } from "@/interfaces";

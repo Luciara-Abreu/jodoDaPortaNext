@@ -1,22 +1,20 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from "react";
 import { ContainerButton } from "./styles";
-import { POSITION_UP, POSITION_TOP } from '@/settings/constants';
-import Message from '../../message/mensage';
-import { ButtonHeroYProps } from '@/interfaces/heroInterfaces';
-import useWindowDimensions from '@/hook/useWindowsDimension';
-
+import { POSITION_UP, POSITION_TOP } from "@/settings/constants";
+import Message from "../../message/mensage";
+import useWindowDimensions from "@/hook/useWindowsDimension";
+import { ButtonHeroYProps } from "@/interfaces";
 
 const ButtonHeroY: React.FC<ButtonHeroYProps> = ({ onPositionUpdateY }) => {
   const [buttonUp, setButtonUp] = useState(POSITION_UP);
   const [buttonTop, setButtonTop] = useState(10);
   const [stepDownUp, setStepDownUp] = useState(27);
   const [updateMapaY, setUpdateMapaY] = useState(442);
-  const [endOfTheMapaY, setEndOfTheMapaY] = useState(1055); 
+  const [endOfTheMapaY, setEndOfTheMapaY] = useState(1055);
 
   let message = "";
 
   const { height: windowHeight } = useWindowDimensions();
-
 
   useEffect(() => {
     const updateStepDownUp = () => {
@@ -35,9 +33,9 @@ const ButtonHeroY: React.FC<ButtonHeroYProps> = ({ onPositionUpdateY }) => {
     };
 
     updateStepDownUp();
-    window.addEventListener('resize', updateStepDownUp);
+    window.addEventListener("resize", updateStepDownUp);
     return () => {
-      window.removeEventListener('resize', updateStepDownUp);
+      window.removeEventListener("resize", updateStepDownUp);
     };
   }, [windowHeight]);
 
@@ -71,7 +69,10 @@ const ButtonHeroY: React.FC<ButtonHeroYProps> = ({ onPositionUpdateY }) => {
     <>
       <ContainerButton className="glow-on-hover">
         <button className="arrow-button arrow-up" onClick={changeUp}></button>
-        <button className="arrow-button arrow-down" onClick={changeDown}></button>
+        <button
+          className="arrow-button arrow-down"
+          onClick={changeDown}
+        ></button>
       </ContainerButton>
       {message && <Message message={message} />}
     </>
