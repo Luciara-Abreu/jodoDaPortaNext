@@ -8,24 +8,31 @@ import Chest from "../chest/chest";
 import { IHeroProps } from "@/interfaces";
 import Debugger from "@/Debugger";
 
-const Tabuleiro: React.FC<IHeroProps> = ({buttonLeft,buttonRight, buttonDown, buttonUp}) => {
+const Tabuleiro: React.FC<IHeroProps> = ({
+  buttonLeft,
+  buttonRight,
+  buttonDown,
+  buttonUp,
+}) => {
   return (
     <TabuleiroContainer>
       <Hero
         buttonLeft={buttonLeft}
         buttonRight={buttonRight}
         buttonDown={buttonDown}
-        buttonUp={buttonUp}  
+        buttonUp={buttonUp}
       />
       <Chest />
       <Trap />
-      <MiniDemon key="miniDemon" initialPosition={{ y: 7, x: 5 }}  text={0} />
-      <MiniDemon key="miniDemon" initialPosition={{ y: 5, x: 17 }} text={0} />
-      <MiniDemon key="miniDemon" initialPosition={{ y: 1, x: 7 }}  text={0} />
-      <MiniDemon key="miniDemon" initialPosition={{ y: 4, x: 1 }} text={0} />
-      <MiniDemon key="miniDemon" initialPosition={{ y: 3, x: 3 }}  text={0} />
+      <MiniDemon key="miniDemon" initialPosition={{ y: 14, x: 15 }} text={0} />
+      <MiniDemon key="miniDemon" initialPosition={{ y: 9, x: 9 }} text={0} />
+      <MiniDemon key="miniDemon" initialPosition={{ y: 4, x: 16 }} text={0} />
+      <MiniDemon key="miniDemon" initialPosition={{ y: 17, x: 5 }} text={0} />
+      <MiniDemon key="miniDemon" initialPosition={{ y: 5 , x: 2 }} text={0} />
       <Demon key="demon" initialPosition={{ y: 3, x: 10 }} text={0} />
-      <Image  src="/images/tileset.gif" alt="tabuleiro do jogo"
+      <Image
+        src="/images/tileset.gif"
+        alt="tabuleiro do jogo"
         width={0}
         height={0}
         className="image-tabuleiro"
@@ -37,5 +44,5 @@ const Tabuleiro: React.FC<IHeroProps> = ({buttonLeft,buttonRight, buttonDown, bu
 export default Tabuleiro;
 
 /**
- * 
+ *
  */
