@@ -22,7 +22,7 @@ const ContainerApp = styled.div`
     margin: 0;
     padding: 0;
     width: 260%;
-    height: 260vh;
+    height: 250vh;
     background: #282c34;
 
     > h1 {
@@ -59,7 +59,7 @@ const Body = styled.div`
 
     .button-hero {
       position: absolute;
-      top: 60%;
+      top: 55%;
       left: 30%; /* Alinha horizontalmente ao centro */
       transform: translateX(-50%); /* Centraliza horizontalmente */
     }
