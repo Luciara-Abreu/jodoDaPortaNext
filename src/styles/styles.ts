@@ -64,7 +64,7 @@ const Body = styled.div`
     .button-hero {
       position: absolute;
       top: 60%;
-      left: 20%; /* Alinha horizontalmente ao centro */
+      left: 30%; /* Alinha horizontalmente ao centro */
       transform: translateX(-50%); /* Centraliza horizontalmente */
     }
   }

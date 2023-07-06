@@ -19,7 +19,11 @@ const Tabuleiro: React.FC<IHeroProps> = ({buttonLeft,buttonRight, buttonDown, bu
       />
       <Chest />
       <Trap />
-      <MiniDemon key="miniDemon" initialPosition={{ y: 7, x: 5 }} text={0} />
+      <MiniDemon key="miniDemon" initialPosition={{ y: 7, x: 5 }}  text={0} />
+      <MiniDemon key="miniDemon" initialPosition={{ y: 5, x: 17 }} text={0} />
+      <MiniDemon key="miniDemon" initialPosition={{ y: 1, x: 7 }}  text={0} />
+      <MiniDemon key="miniDemon" initialPosition={{ y: 4, x: 1 }} text={0} />
+      <MiniDemon key="miniDemon" initialPosition={{ y: 3, x: 3 }}  text={0} />
       <Demon key="demon" initialPosition={{ y: 3, x: 10 }} text={0} />
       <Image  src="/images/tileset.gif" alt="tabuleiro do jogo"
         width={0}
@@ -33,6 +37,5 @@ const Tabuleiro: React.FC<IHeroProps> = ({buttonLeft,buttonRight, buttonDown, bu
 export default Tabuleiro;
 
 /**
- *    <MiniDemon initialPosition={{ y: 5, x: 17 }} />
-      <MiniDemon initialPosition={{ y: 3, x: 3 }} />
+ * 
  */

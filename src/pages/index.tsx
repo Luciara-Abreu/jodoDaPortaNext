@@ -42,10 +42,10 @@ export default function Home() {
         ) : (
           <>
             <Tabuleiro
-              buttonLeft={buttonLeft}
-              buttonRight={buttonRight}
-              buttonDown={buttonDown}
-              buttonUp={buttonUp}
+              buttonLeft={0}
+              buttonRight={0}
+              buttonDown={0}
+              buttonUp={0}
             />
           </>
         )}
