@@ -21,8 +21,8 @@ const ContainerApp = styled.div`
   @media (max-width: 767px) {
     margin: 0;
     padding: 0;
-    width: 306%;
-    height: 306vh;
+    width: 260%;
+    height: 260vh;
     background: #282c34;
 
     > h1 {
