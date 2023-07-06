@@ -17,7 +17,7 @@ function useMovementMonsters(props: IProps) {
     if (nextMovement) {
       setPosition(nextMovement);
       setDirection(randomDirection);
-      console.log("Executou");
+      //console.log("Executou");
     }
   }, 2000);
 
