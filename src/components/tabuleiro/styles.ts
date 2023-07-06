@@ -18,7 +18,7 @@ const TabuleiroContainer = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    top: 15%;
+    top: 20%;
 
     .image-tabuleiro {
     width: ${GAME_SIZE}px;
