@@ -8,7 +8,7 @@ const ContainerApp = styled.div`
   justify-content: center;
   align-items: center;
   background: #282c34;
-  position: relative;
+  position: absolute;
   margin: 0;
   padding: 0;
 
@@ -23,10 +23,6 @@ const ContainerApp = styled.div`
     padding: 0;
     width: 306%;
     height: 306vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     background: #282c34;
 
     > h1 {
@@ -53,11 +49,11 @@ const Body = styled.div`
   }
 
   @media (max-width: 767px) {
+    display: flex;
     width: 100%;
     height: 100%;
     margin: 0;
     padding: 0;
-    display: flex;
     justify-content: center;
     align-items: center;
 

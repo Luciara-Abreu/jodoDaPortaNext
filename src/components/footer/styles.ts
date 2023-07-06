@@ -16,10 +16,12 @@ const ContainerComponentFooter = styled.div`
   }
 
   @media (max-width: 767px) {
-    width: 82%;
+    width: 100%;
     height: auto;
-    margin-top: 0;
-    padding: 0% 8% 0% 8%;
+    margin: 0;
+    padding: 0;
+    bottom:0;
+    position:absolute;
 
     .p-footer {
       font-size: 25px;
