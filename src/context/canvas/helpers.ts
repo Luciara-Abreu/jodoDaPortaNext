@@ -8,9 +8,9 @@ export function handleNextMoviment( direction: string,  position: IMovementProps
       return { x: position.x - 1, y: position.y };
     case EDirection.RIGHT:
       return { x: position.x + 1, y: position.y };
-    case EDirection.TOP:
+    case EDirection.DOWN:
       return { x: position.x, y: position.y - 1 };
-    case EDirection.BOTTON:
+    case EDirection.UP:
       return { x: position.x, y: position.y + 1 };
   }
 }
