@@ -22,7 +22,6 @@ const Hero: React.FC<IHeroProps> = ({buttonLeft,buttonRight,buttonDown,buttonUp}
     left: `${movi.position.x * TILE_SIZE}px`,
     transform: `scaleX(${movi.direction === EDirection.RIGHT ? 1 : -1})`,
   };
-  console.log("Hero ==> ", movimentKeyboard);
 
   const movimentButton = {
     left: `${buttonLeft}px`,

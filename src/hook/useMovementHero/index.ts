@@ -16,22 +16,16 @@ function useMovementHero() {
         const newState = { x: position.x - 1, y: position.y };
         setPosition(newState);
         setDirection(EDirection.LEFT);
-
-        console.log("event", event, position);
       } else if (event.key === EDirection.RIGHT) {
         const newState = { x: position.x + 1, y: position.y };
         setPosition(newState);
         setDirection(EDirection.RIGHT);
-
-        console.log("event", event, position);
       } else if (event.key === EDirection.UP) {
         const newState = { x: position.x, y: position.y + 1 };
         setPosition(newState);
-        console.log("event", event, position);
       } else if (event.key === EDirection.DOWN) {
         const newState = { x: position.x, y: position.y - 1 };
         setPosition(newState);
-        console.log("event", event, position);
       }
     };
 
