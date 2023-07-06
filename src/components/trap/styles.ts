@@ -11,8 +11,6 @@ const TrapImage = styled.div`
   }
 
   position: absolute;
-  top: ${21 * 5}px;
-  left: ${42 * 8}px;
   width: 47px;
   height: 36px;
   background-image: url(/images/trap.png);
