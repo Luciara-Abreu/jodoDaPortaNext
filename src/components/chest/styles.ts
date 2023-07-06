@@ -11,8 +11,6 @@ const ChestImage = styled.div`
   }
 
   position: absolute;
-  top: ${95 * 2}px;
-  left: ${24 * 10}px;
   width: ${48}px;
   height: 50px;
   background-image: url(/images/chest.png);
