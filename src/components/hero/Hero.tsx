@@ -4,7 +4,7 @@ import useDirection from "@/hook/useDirectionHero";
 import { IHeroProps } from "@/interfaces";
 import useScreenSize from "@/hook/useScreenSize";
 import { TILE_SIZE, EDirection } from "@/settings/constants";
-import useMovementHero from "@/hook/useMovementHero";
+import useMovementHeroKeyboard from "@/hook/useMovementHeroKeyboard";
 
 const initialPosition = {
   y: 1,
@@ -19,7 +19,7 @@ const Hero: React.FC<IHeroProps> = ({
 }) => {
   const isSmallScreen = useScreenSize(760);
   const transform = useDirection(buttonLeft);
-  const movi = useMovementHero();
+  const movi = useMovementHeroKeyboard();
 
   const movimentKeyboard = {
     bottom: `${movi.position.y * TILE_SIZE}px`,
