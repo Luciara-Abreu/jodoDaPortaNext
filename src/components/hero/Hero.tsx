@@ -11,9 +11,13 @@ const initialPosition = {
   x: 1,
 };
 
-const Hero: React.FC<IHeroProps> = ({buttonLeft,buttonRight,buttonDown,buttonUp}) => {
-  const isSmallScreen = useScreenSize(768);
-
+const Hero: React.FC<IHeroProps> = ({
+  buttonLeft,
+  buttonRight,
+  buttonDown,
+  buttonUp,
+}) => {
+  const isSmallScreen = useScreenSize(760);
   const transform = useDirection(buttonLeft);
   const movi = useMovementHero();
 
@@ -33,10 +37,10 @@ const Hero: React.FC<IHeroProps> = ({buttonLeft,buttonRight,buttonDown,buttonUp}
 
   return (
     <>
-  <HeroImage style={isSmallScreen ? movimentButton : movimentKeyboard} />
+      <HeroImage style={isSmallScreen ? movimentButton : movimentKeyboard} />
     </>
   );
 };
 
 export default Hero;
-// 
+//
