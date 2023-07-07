@@ -6,7 +6,7 @@ const initialPosition = {
   x: 1,
 };
 
-function useMovementHero() {
+function useMovementHeroKeyboard() {
   const [position, setPosition] = useState(initialPosition);
   const [direction, setDirection] = useState(EDirection.RIGHT);
 
@@ -39,4 +39,4 @@ function useMovementHero() {
   return { position, direction };
 }
 
-export default useMovementHero;
+export default useMovementHeroKeyboard;
