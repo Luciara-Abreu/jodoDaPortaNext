@@ -5,12 +5,16 @@ export interface IHeroProps {
   buttonUp: number;
 }
 
+
+
 export interface ButtonHeroXProps {
   onPositionUpdateX: (buttonLeft: number, buttonRight: number ) => void;
 }
 export interface ButtonHeroYProps {
   onPositionUpdateY: (buttonDown: number,  buttonUp: number ) => void;
 }
+
+
 
 export interface CombinedProps extends IProps, IHeroProps {}
 
