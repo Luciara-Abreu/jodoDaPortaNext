@@ -5,7 +5,7 @@ import Message from '../../message/mensage'
 import useWindowDimensions from '@/hook/useWindowsDimension'
 import { ButtonHeroYProps } from '@/interfaces'
 
-const ButtonHeroY: React.FC<ButtonHeroYProps> = ({ onPositionUpdateY }) => {
+const ButtonHeroY: React.FC<ButtonHeroYProps> = ({ updatePositionY }) => {
   const [buttonUp, setButtonUp] = useState(POSITION_UP)
   const [buttonTop, setButtonTop] = useState(10)
   const [stepDownUp, setStepDownUp] = useState(27)
@@ -21,14 +21,14 @@ const ButtonHeroY: React.FC<ButtonHeroYProps> = ({ onPositionUpdateY }) => {
       const newStepDownUp = windowHeight <= 657 ? 27 : 62
       setStepDownUp(newStepDownUp)
 
-      const newUpdateMapaY = windowHeight <= 657 ? 445 : 1070
+      const newUpdateMapaY = windowHeight <= 657 ? 445 : 816
       setUpdateMapaY(newUpdateMapaY)
       setEndOfTheMapaY(newUpdateMapaY) // Atualiza o valor de endOfTheMapaY
 
       // Verificar se o botão está dentro dos limites após a alteração do tamanho da janela
       if (buttonTop > newUpdateMapaY) {
         setButtonTop(newUpdateMapaY)
-        onPositionUpdateY(newUpdateMapaY, buttonUp)
+        updatePositionY(newUpdateMapaY, buttonUp)
       }
     }
 
@@ -45,8 +45,9 @@ const ButtonHeroY: React.FC<ButtonHeroYProps> = ({ onPositionUpdateY }) => {
     const lowerLimit = endOfTheMapaY
 
     if (newButtonTop >= upperLimit && newButtonTop <= lowerLimit) {
+      console.log('Component Button Down ==> ', newButtonTop)
       setButtonTop(newButtonTop)
-      onPositionUpdateY(newButtonTop, buttonUp)
+      updatePositionY(newButtonTop, buttonUp)
     } else {
       message = 'Oops! Fim do mapa. Escolha outro caminho.'
     }
@@ -58,8 +59,9 @@ const ButtonHeroY: React.FC<ButtonHeroYProps> = ({ onPositionUpdateY }) => {
     const lowerLimit = endOfTheMapaY
 
     if (newButtonTop >= upperLimit && newButtonTop <= lowerLimit) {
+      console.log('Component Button UP ==> ', newButtonTop)
       setButtonTop(newButtonTop)
-      onPositionUpdateY(newButtonTop, buttonUp)
+      updatePositionY(newButtonTop, buttonUp)
     } else {
       message = 'Oops! Fim do mapa. Escolha outro caminho.'
     }

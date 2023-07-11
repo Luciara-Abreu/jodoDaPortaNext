@@ -2,10 +2,9 @@ import React from 'react'
 import { HeroImage } from './styles'
 import useDirection from '@/hook/useDirectionHero'
 import { IHeroProps } from '@/interfaces'
-import useScreenSize from '@/hook/useScreenSize'
 import { TILE_SIZE, EDirection } from '@/settings/constants'
 import useMovementHeroKeyboard from '@/hook/useMovementHeroKeyboard'
-
+import { useWindowWidth } from '@react-hook/window-size'
 
 const initialPosition = {
   y: 1,
@@ -13,10 +12,17 @@ const initialPosition = {
 }
 
 const Hero: React.FC<IHeroProps> = ({ buttonLeft, buttonRight, buttonDown, buttonUp }) => {
-  const isSmallScreen = useScreenSize(760)
   const transform = useDirection(buttonLeft)
   const movi = useMovementHeroKeyboard()
-  
+  const windowWidth = useWindowWidth()
+
+  const movimentButton = {
+    bottom: `${buttonUp}px`,
+    left: `${buttonLeft}px`,
+    right: `${buttonRight}px`,
+    top: `${buttonDown}px`,
+    transform: transform,
+  }
 
   const movimentKeyboard = {
     bottom: `${movi.position.y * TILE_SIZE}px`,
@@ -24,27 +30,15 @@ const Hero: React.FC<IHeroProps> = ({ buttonLeft, buttonRight, buttonDown, butto
     transform: `scaleX(${movi.direction === EDirection.RIGHT ? 1 : -1})`,
   }
 
-  const movimentButton = {
-    left: `${buttonLeft}px`,
-    right: `${buttonRight}px`,
-    top: `${buttonDown}px`,
-    bottom: `${buttonUp}px`,
-    transform: transform,
-  }
+  const typeMovimentHero = windowWidth <= 765 ? movimentButton : movimentKeyboard
 
 
-  const handleUpdatePositionX = (newPositionX: number) => {
-    // Atualiza a posição do herói no eixo X
-    updatePositionX(newPositionX)
-  }
-
-  console.log('Component Hero ==> ', buttonLeft)
   return (
     <>
-      <HeroImage style={isSmallScreen ? movimentButton : movimentKeyboard} />
+      <HeroImage style={typeMovimentHero} />
     </>
   )
 }
 
 export default Hero
-//
+
