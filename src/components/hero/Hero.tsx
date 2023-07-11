@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { HeroImage } from './styles'
 import useDirection from '@/hook/useDirectionHero'
 import { IHeroProps } from '@/interfaces'
@@ -16,6 +16,12 @@ const Hero: React.FC<IHeroProps> = ({ buttonLeft, buttonRight, buttonDown, butto
   const movi = useMovementHeroKeyboard()
   const windowWidth = useWindowWidth()
 
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
   const movimentButton = {
     bottom: `${buttonUp}px`,
     left: `${buttonLeft}px`,
@@ -30,15 +36,13 @@ const Hero: React.FC<IHeroProps> = ({ buttonLeft, buttonRight, buttonDown, butto
     transform: `scaleX(${movi.direction === EDirection.RIGHT ? 1 : -1})`,
   }
 
-  const typeMovimentHero = windowWidth <= 765 ? movimentButton : movimentKeyboard
-
+  const typeMovimentHero = windowWidth <= 765 ? movimentButton : movimentKeyboard;
 
   return (
     <>
-      <HeroImage style={typeMovimentHero} />
+    { isClient && <HeroImage style={typeMovimentHero} />}
     </>
   )
 }
 
 export default Hero
-
