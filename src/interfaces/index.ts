@@ -1,25 +1,29 @@
 export interface IHeroProps {
-  buttonLeft: number
-  buttonRight: number
-  buttonDown: number
-  buttonUp: number
+  buttonLeft: number;
+  buttonRight: number;
+  buttonDown: number;
+  buttonUp: number;
 }
 
 export interface ButtonHeroXProps {
-  updatePositionX: (buttonLeft: number, buttonRight: number) => void
+  onPositionUpdateX: (buttonLeft: number, buttonRight: number ) => void;
 }
 export interface ButtonHeroYProps {
-  updatePositionY: (buttonDown: number, buttonUp: number) => void
+  onPositionUpdateY: (buttonDown: number,  buttonUp: number ) => void;
 }
 
 export interface CombinedProps extends IProps, IHeroProps {}
 
 export interface IMovementProps {
-  y: number
-  x: number
+  y: number;
+  x: number;
 }
 
+
 export interface IProps {
-  initialPosition: { x: number; y: number }
-  text: number
+  initialPosition: 
+  { x: number; 
+    y: number;
+  };
+  text: number;
 }

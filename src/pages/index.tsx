@@ -7,12 +7,11 @@ import ButtonHeroY from '@/components/button/buttonEixoY/ButtonEixoY'
 import useButtonPositions from '@/hook/useButtonPosition'
 import useScreenSize from '@/hook/useScreenSize'
 
-
 export default function Home() {
   const isSmallScreen = useScreenSize(767)
+
   const { buttonLeft, buttonRight, buttonDown, buttonUp, handlePositionUpdateX, handlePositionUpdateY } = useButtonPositions()
 
-  
   return (
     <ContainerApp>
       <Body>
@@ -20,10 +19,10 @@ export default function Home() {
           <>
             <div className="button-hero">
               <div>
-                <ButtonHeroX updatePositionX={handlePositionUpdateX} />
+                <ButtonHeroX onPositionUpdateX={handlePositionUpdateX} />
               </div>
               <div>
-                <ButtonHeroY updatePositionY={handlePositionUpdateY} />
+                <ButtonHeroY onPositionUpdateY={handlePositionUpdateY} />
               </div>
             </div>
             <Tabuleiro buttonLeft={buttonLeft} buttonRight={buttonRight} buttonDown={buttonDown} buttonUp={buttonUp} />

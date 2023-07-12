@@ -12,7 +12,6 @@ const Tabuleiro: React.FC<IHeroProps> = ({ buttonLeft, buttonRight, buttonDown, 
   return (
     <TabuleiroContainer>
       <Hero buttonLeft={buttonLeft} buttonRight={buttonRight} buttonDown={buttonDown} buttonUp={buttonUp} />
-      
       <Chest key="chest1" initialPosition={{ y: 4, x: 5 }} text={0} />
       <Chest key="chest2" initialPosition={{ y: 6, x: 18 }} text={0} />
       <Chest key="chest3" initialPosition={{ y: 10, x: 10 }} text={0} />
