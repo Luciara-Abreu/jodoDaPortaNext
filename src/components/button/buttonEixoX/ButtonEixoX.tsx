@@ -1,6 +1,6 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import { ContainerButton } from './styles'
-import { POSITION_RIGHT, POSITION_LEFT } from '@/settings/constants'
+import { POSITION_RIGHT, POSITION_LEFT, FIM_DO_MAPA_X, stepLeftRight } from '@/settings/constants'
 import Message from '../../message/mensage'
 import { ButtonHeroXProps } from '@/interfaces'
 
@@ -9,9 +9,6 @@ const ButtonHeroX: React.FC<ButtonHeroXProps> = ({ onPositionUpdateX }) => {
   const [buttonRight, setButtonRight] = useState<number>(POSITION_RIGHT)
 
   let message = ''
-
-  const stepLeftRight = 48
-  const FIM_DO_MAPA_X = 864 // horizontal / inicio 48
 
   const changeLeft = () => {
     const newButtonLeft = buttonLeft + stepLeftRight
