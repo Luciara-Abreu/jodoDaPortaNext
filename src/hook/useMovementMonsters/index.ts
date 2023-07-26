@@ -18,7 +18,7 @@ function useMovementMonsters(props: IProps) {
       setPosition(nextMovement);
       setDirection(randomDirection);
     }
-  }, 20000);
+  }, 400);
 
   return {
     position,
