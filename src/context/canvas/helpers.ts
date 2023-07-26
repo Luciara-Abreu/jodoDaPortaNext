@@ -1,17 +1,25 @@
 import { IMovementProps } from "@/interfaces";
 import { EDirection } from "@/settings/constants";
 
-export function handleNextMoviment( direction: string,  position: IMovementProps
+export function handleNextMoviment(direction: string, position: IMovementProps
 ) {
   switch (direction) {
     case EDirection.LEFT:
-      return { x: position.x - 1, y: position.y };
+      if (position.x > 1 && position.x <= 18) {
+        return { x: position.x - 1, y: position.y };
+      }
     case EDirection.RIGHT:
-      return { x: position.x + 1, y: position.y };
+      if (position.x >= 1 && position.x <= 17) {
+        return { x: position.x + 1, y: position.y };
+      }
     case EDirection.DOWN:
-      return { x: position.x, y: position.y - 1 };
+      if (position.y > 1 && position.y <= 17) {
+        return { x: position.x, y: position.y - 1 };
+      }
     case EDirection.UP:
-      return { x: position.x, y: position.y + 1 };
+      if (position.y >= 1 && position.y <= 16) {
+        return { x: position.x, y: position.y + 1 };
+      }
   }
 }
 
