@@ -1,60 +1,34 @@
-import { useEffect, useState } from 'react';
-import { ContainerButton } from './styles';
-import { POSITION_RIGHT, POSITION_LEFT } from '@/settings/constants';
-import Message from '../../message/mensage';
-import { useWindowWidth } from '@react-hook/window-size';
-import { ButtonHeroXProps } from '@/interfaces';
-
+import { useState } from 'react'
+import { ContainerButton } from './styles'
+import { POSITION_RIGHT, POSITION_LEFT, FIM_DO_MAPA_X, stepLeftRight } from '@/settings/constants'
+import Message from '../../message/mensage'
+import { ButtonHeroXProps } from '@/interfaces'
 
 const ButtonHeroX: React.FC<ButtonHeroXProps> = ({ onPositionUpdateX }) => {
-  const [buttonLeft, setButtonLeft] = useState(POSITION_LEFT);
-  const [buttonRight, setButtonRight] = useState<number>(POSITION_RIGHT);
-  const [stepLeftRight, setStepLeftRight] = useState(48);
-  const [updateMapaX, setUpdateMataX] = useState(922);
+  const [buttonLeft, setButtonLeft] = useState(POSITION_LEFT)
+  const [buttonRight, setButtonRight] = useState<number>(POSITION_RIGHT)
 
-
-  let message = '';
-
-  const windowWidth = useWindowWidth();
-  const setNewStepLeftRight = windowWidth <= 765 ? 65 : 48;
-  const endOfTheMapaX = windowWidth <= 765 ? 1245 : 922;
-
-  useEffect(() => {
-    const updateStepLeftRight = () => {
-      const newStepLeftRight = setNewStepLeftRight;
-      setStepLeftRight(newStepLeftRight);
-
-      const newSetMapaX = endOfTheMapaX;
-      setUpdateMataX(newSetMapaX);
-    };
-
-    updateStepLeftRight();
-    window.addEventListener('resize', updateStepLeftRight);
-
-    return () => {
-      window.removeEventListener('resize', updateStepLeftRight);
-    };
-  }, []);
+  let message = ''
 
   const changeLeft = () => {
-    const newButtonLeft = buttonLeft + setNewStepLeftRight;
-    if (newButtonLeft >= POSITION_LEFT && newButtonLeft <= endOfTheMapaX) {
-      setButtonLeft(newButtonLeft);
-      onPositionUpdateX(newButtonLeft, buttonRight);
+    const newButtonLeft = buttonLeft + stepLeftRight
+    if (newButtonLeft >= POSITION_LEFT && newButtonLeft <= FIM_DO_MAPA_X) {
+      setButtonLeft(newButtonLeft)
+      onPositionUpdateX(newButtonLeft, buttonRight)
     } else {
-      message = 'Opz! Fim do mapa. Escolha outro caminho.';
+      message = 'Opz! Fim do mapa. Escolha outro caminho.'
     }
-  };
+  }
 
   const changeRight = () => {
-    const newButtonLeft = buttonLeft - setNewStepLeftRight;
-    if (newButtonLeft >= POSITION_LEFT && newButtonLeft <= endOfTheMapaX) {
-      setButtonLeft(newButtonLeft);
-      onPositionUpdateX(newButtonLeft, buttonRight);
+    const newButtonLeft = buttonLeft - stepLeftRight
+    if (newButtonLeft >= POSITION_LEFT && newButtonLeft <= FIM_DO_MAPA_X) {
+      setButtonLeft(newButtonLeft)
+      onPositionUpdateX(newButtonLeft, buttonRight)
     } else {
-      message = 'Opz! Fim do mapa. Escolha outro caminho.';
+      message = 'Opz! Fim do mapa. Escolha outro caminho.'
     }
-  };
+  }
 
   return (
     <>
@@ -64,7 +38,7 @@ const ButtonHeroX: React.FC<ButtonHeroXProps> = ({ onPositionUpdateX }) => {
       </ContainerButton>
       {message && <Message message={message} />}
     </>
-  );
-};
+  )
+}
 
-export default ButtonHeroX;
+export default ButtonHeroX

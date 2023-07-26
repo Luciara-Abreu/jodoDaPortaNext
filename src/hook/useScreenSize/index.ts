@@ -5,6 +5,7 @@ const useScreenSize = (breakpoint: number) => {
   const [isSmallScreen, setIsSmallScreen] = useState(false);
   const { width } = useWindowDimensions();
 
+
   useEffect(() => {
     setIsSmallScreen(width <= breakpoint);
   }, [width, breakpoint]);

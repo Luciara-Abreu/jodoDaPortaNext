@@ -10,22 +10,31 @@ function useMovementHeroKeyboard() {
   const [position, setPosition] = useState(initialPosition);
   const [direction, setDirection] = useState(EDirection.RIGHT);
 
+
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key === EDirection.LEFT) {
-        const newState = { x: position.x - 1, y: position.y };
-        setPosition(newState);
-        setDirection(EDirection.LEFT);
+        if (position.x > 1 && position.x <= 18) {
+          const newState = { x: position.x - 1, y: position.y };
+          setPosition(newState);
+          setDirection(EDirection.LEFT);
+        }
       } else if (event.key === EDirection.RIGHT) {
-        const newState = { x: position.x + 1, y: position.y };
-        setPosition(newState);
-        setDirection(EDirection.RIGHT);
+        if (position.x >= 1 && position.x <= 17) {
+          const newState = { x: position.x + 1, y: position.y };
+          setPosition(newState);
+          setDirection(EDirection.RIGHT);
+        }
       } else if (event.key === EDirection.UP) {
-        const newState = { x: position.x, y: position.y + 1 };
-        setPosition(newState);
+        if (position.y >= 1 && position.y <= 16) {
+          const newState = { x: position.x, y: position.y + 1 };
+          setPosition(newState);
+        }
       } else if (event.key === EDirection.DOWN) {
-        const newState = { x: position.x, y: position.y - 1 };
-        setPosition(newState);
+        if (position.y > 1 && position.y <= 17) {
+          const newState = { x: position.x, y: position.y - 1 };
+          setPosition(newState);
+        }
       }
     };
 

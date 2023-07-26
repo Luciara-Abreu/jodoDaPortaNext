@@ -8,7 +8,7 @@ import useButtonPositions from '@/hook/useButtonPosition'
 import useScreenSize from '@/hook/useScreenSize'
 
 export default function Home() {
-  const isSmallScreen = useScreenSize(767)
+  const isSmallScreen = useScreenSize(975)
 
   const { buttonLeft, buttonRight, buttonDown, buttonUp, handlePositionUpdateX, handlePositionUpdateY } = useButtonPositions()
 

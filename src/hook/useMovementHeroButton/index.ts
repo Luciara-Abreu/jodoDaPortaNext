@@ -34,9 +34,7 @@ function useMovementHeroButton() {
     return () => {
       window.removeEventListener('keydown', handleOnClick)
     }
-  }, [position])
-
-  console.log('position.x ==> ', position.x * 48)
+  }, [position]) 
 
   return { position, direction }
 }
