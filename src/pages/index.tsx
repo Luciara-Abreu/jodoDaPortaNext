@@ -8,7 +8,7 @@ import useButtonPositions from '@/hook/useButtonPosition'
 import useScreenSize from '@/hook/useScreenSize'
 
 export default function Home() {
-  const isSmallScreen = useScreenSize(975)
+  const isSmallScreen = useScreenSize()
 
   const { buttonLeft, buttonRight, buttonDown, buttonUp, handlePositionUpdateX, handlePositionUpdateY } = useButtonPositions()
 
@@ -17,6 +17,7 @@ export default function Home() {
       <Body>
         {isSmallScreen ? (
           <>
+            <Tabuleiro buttonLeft={buttonLeft} buttonRight={buttonRight} buttonDown={buttonDown} buttonUp={buttonUp} />
             <div className="button-hero">
               <div>
                 <ButtonHeroX onPositionUpdateX={handlePositionUpdateX} />
@@ -25,7 +26,6 @@ export default function Home() {
                 <ButtonHeroY onPositionUpdateY={handlePositionUpdateY} />
               </div>
             </div>
-            <Tabuleiro buttonLeft={buttonLeft} buttonRight={buttonRight} buttonDown={buttonDown} buttonUp={buttonUp} />
           </>
         ) : (
           <>

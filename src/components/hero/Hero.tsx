@@ -12,7 +12,7 @@ const initialPosition = {
 }
 
 const Hero: React.FC<IHeroProps> = ({ buttonLeft, buttonRight, buttonDown, buttonUp }) => {
-  const isSmallScreen = useScreenSize(975)
+  const isSmallScreen = useScreenSize()
   const transform = useDirection(buttonLeft)
   const movi = useMovementHeroKeyboard()
 
