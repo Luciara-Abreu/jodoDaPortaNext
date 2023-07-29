@@ -6,15 +6,18 @@ const ContainerButton = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: row; 
-  margin: 434px 0 -45px 50px;
-  position: absolute;
-  gap: 85px;
+  position: absolute;  
+  top: 400px;
+  left:-55px;
+  gap: 100px;
+
 
 .right, .left{
   background: white;
     height: 100px;
     width:100px; 
     border-radius: 50%;
+    margin: 45px;
     transition: 0.4s ease;
     cursor: pointer;
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
@@ -30,8 +33,8 @@ const ContainerButton = styled.div`
   position: absolute;
   height: 30px;
   width: 30px;
-  border-top: 5px solid #202020;
-  border-left: 5px solid #202020;
+  border-top: 5px solid gray;
+  border-left: 5px solid gray;
   left: 25px;
   top:25px;
 }
