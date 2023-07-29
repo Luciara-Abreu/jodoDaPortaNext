@@ -12,7 +12,7 @@ const useScreenSize = () => {
     let isSmall = false;
 
     for (let i = 0; i < breakpoints.length; i++) {
-      if (width === breakpoints[i]) {
+      if (width === breakpoints[i] || width < 1000) {
         isSmall = true;
         break;
       }
