@@ -6,8 +6,9 @@ const ContainerButton = styled.div`
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin: 300px 0 0 97px;
     position: absolute;
+    top: 300px;
+    left: 96px;
     gap: 20%;
 
     .up,
@@ -31,8 +32,8 @@ const ContainerButton = styled.div`
       position: absolute;
       height: 30px;
       width: 30px;
-      border-top: 5px solid #202020;
-      border-left: 5px solid #202020;
+      border-top: 5px solid gray;
+      border-left: 5px solid gray;
       left: 25px;
       top: 25px;
     }
