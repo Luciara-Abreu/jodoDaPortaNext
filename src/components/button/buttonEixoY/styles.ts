@@ -1,93 +1,48 @@
-import  styled from 'styled-components'
+import styled from 'styled-components'
 
 const ContainerButton = styled.div`
-  position: fixed;
-  top: 265px;
-  left: 53px;
-  transform: translate(0, 0);
-
-  width: 50px;
-  height: 150px;
-  border-radius: 20%;
-  background-color: #bf9b89;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-
-
-  .arrow-button {
+  @media (max-width: 767px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 300px 0 0 97px;
     position: absolute;
-    width: 0;
-    height: 0;
-    border-style: solid;
-    background-color: transparent;
-    transition: box-shadow 0.3s;
-    cursor: pointer;
-  }
-  
-  .arrow-button.arrow-up {
-    border-width: 15px 35px 15px 0;//30px 50px 30px 0;
-    transform: rotate(90deg);
-    border-color: transparent #000 transparent transparent;  
-    bottom: 122px; 
+    gap: 20%;
+
+    .up,
+    .down {
+      background: white;
+      height: 100px;
+      width: 100px;
+      border-radius: 50%;
+      margin: 45px;
+      transition: 0.4s ease;
+      cursor: pointer;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+
+      .up:hover,
+      .down:hover {
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.9);
+      }
     }
 
-  .arrow-button.arrow-down {
-    border-width: 15px 35px 15px 0; //30px 50px 30px 0;
-    transform: rotate(270deg);
-    border-color: transparent #000 transparent transparent;
-    top: 121px;
-  }
-
-  .arrow-button:hover {
-    box-shadow: 5px 5px 5px 3px rgba(0, 0, 0, 0.3);
-  }  
-
-//---------------------------------------------------------------------------------------------------------------------
-  @media (max-width: 767px) {     
-  width: 150px;
-  height: 400px;
-  position: fixed;
-  top: 255px;
-  left: 133px;
-  transform: translate(0, 0);
-  border-radius: 20%;
-  background-color: #bf9b89;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  .arrow-button {
-    position: absolute;
-    width: 0;
-    height: 0;
-    border-style: solid;
-    background-color: transparent;
-    transition: box-shadow 0.3s;
-    cursor: pointer;
-  }
-
-  .arrow-button.arrow-up {
-    border-width: 55px 75px 55px 0;//30px 50px 30px 0;
-    transform: rotate(90deg);
-    border-color: transparent #000 transparent transparent;
-    bottom: 308px;
-  }
-
-  .arrow-button.arrow-down {
-    border-width: 55px 75px 55px 0; //30px 50px 30px 0;
-    transform: rotate(270deg);
-    border-color: transparent #000 transparent transparent;
-    top: 308px;
-  }
-
-  .arrow-button:hover {
-    box-shadow: 5px 5px 5px 3px rgba(0, 0, 0, 0.3);
-  }
-
+    .arr-div {
+      position: absolute;
+      height: 30px;
+      width: 30px;
+      border-top: 5px solid #202020;
+      border-left: 5px solid #202020;
+      left: 25px;
+      top: 25px;
+    }
+    .up {
+      transform: rotate(50deg);
+    }
+    .down {
+      transform: rotate(220deg);
+    }
   }
 `
 
 export { ContainerButton }
-
