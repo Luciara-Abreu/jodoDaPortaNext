@@ -22,7 +22,7 @@ const ContainerApp = styled.div`
     margin: 0;
     padding: 0;
     width: 260%;
-    height: 242.03vh;
+    height: 242.5vh;
     background: #282c34;
 
     > h1 {
