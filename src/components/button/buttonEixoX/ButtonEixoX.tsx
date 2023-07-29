@@ -33,8 +33,12 @@ const ButtonHeroX: React.FC<ButtonHeroXProps> = ({ onPositionUpdateX }) => {
   return (
     <>
       <ContainerButton>
-        <button className="arrow-button arrow-right" onClick={changeRight}></button>
-        <button className="arrow-button arrow-left" onClick={changeLeft}></button>
+        <button className="arrow-button right" onClick={changeRight}>
+          <div className ='arr-div'></div>
+          </button>
+        <button className="arrow-button left" onClick={changeLeft}>
+        <div className ='arr-div'></div>
+          </button>
       </ContainerButton>
       {message && <Message message={message} />}
     </>

@@ -37,8 +37,12 @@ const ButtonHeroY: React.FC<ButtonHeroYProps> = ({ onPositionUpdateY }) => {
   return (
     <>
       <ContainerButton className="glow-on-hover">
-        <button className="arrow-button arrow-up" onClick={changeUp}></button>
-        <button className="arrow-button arrow-down" onClick={changeDown}></button>
+        <button className="arrow-button up" onClick={changeUp}>
+        <div className ='arr-div'></div>
+        </button>
+        <button className="arrow-button down" onClick={changeDown}>
+        <div className ='arr-div'></div>
+        </button>
       </ContainerButton>
       {message && <Message message={message} />}
     </>
