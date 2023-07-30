@@ -1,5 +1,6 @@
 import styled from "styled-components";
 
+
 const ContainerApp = styled.div`
   width: 100%;
   height: 155vh;
@@ -22,7 +23,7 @@ const ContainerApp = styled.div`
     margin: 0;
     padding: 0;
     width: 260%;
-    height: 242.5vh;
+    height: 242.5vh;    
     background: #282c34;
 
     > h1 {
