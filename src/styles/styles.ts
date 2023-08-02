@@ -19,8 +19,23 @@ const ContainerApp = styled.div`
     margin: 0;
   }
 
+  @media (max-width: 768px) {
+    margin: 0;
+    padding: 0;
+    width: 260%;
+    height: 242.5vh;    
+    background: #282c34;
+
+    > h1 {
+      color: #fff;
+      padding-top: 6%;
+      font-size: 90px;
+      margin: 0;
+    }
+  }
+
   //575px
-  @media(min-width: 320px){
+  @media(min-width: 320px) and (max-width: 576px){
     margin: 0;
     padding: 0;
     width: 340%;
