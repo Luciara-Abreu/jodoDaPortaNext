@@ -2,18 +2,21 @@ import { useState, useEffect } from 'react';
 import useWindowDimensions from '../useWindowsDimension';
 
 const useScreenSize = () => {
-  const [isSmallScreen, setIsSmallScreen] = useState(false);
+  const [isSmallScreen, setIsSmallScreen] = useState(true);
   const { width } = useWindowDimensions();
 
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  const breakpoints = [2611, 1445, 1275, ,1156, 1105, 1088, 986, 975, 968, 900, 868];
+  //const breakpoints = [1997, 1445, 1275, 1088];
+
+   // eslint-disable-next-line react-hooks/exhaustive-deps
+  const breakpoints = [1024, 1440, 2560];
 
   useEffect(() => {
-    let isSmall = false;
+    let isSmall = true;
 
     for (let i = 0; i < breakpoints.length; i++) {
       if (width === breakpoints[i]) {
-        isSmall = true;
+        isSmall = false;
         break;
       }
     }
