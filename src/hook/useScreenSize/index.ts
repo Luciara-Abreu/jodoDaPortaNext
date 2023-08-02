@@ -5,11 +5,8 @@ const useScreenSize = () => {
   const [isSmallScreen, setIsSmallScreen] = useState(true);
   const { width } = useWindowDimensions();
 
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  //const breakpoints = [1997, 1445, 1275, 1088];
-
    // eslint-disable-next-line react-hooks/exhaustive-deps
-  const breakpoints = [1024, 1440, 2560];
+  const breakpoints = [1024, 1440, 2560, 1360];
 
   useEffect(() => {
     let isSmall = true;
