@@ -19,6 +19,24 @@ const ContainerApp = styled.div`
     margin: 0;
   }
 
+  //575px
+  @media(min-width: 320px){
+    margin: 0;
+    padding: 0;
+    width: 340%;
+    height: 340vh;    
+    background: pink;
+
+    > h1 {
+      color: #fff;
+      padding-top: 6%;
+      font-size: 90px;
+      margin: 0;
+    }
+  }
+
+  
+/*
   @media (max-width: 767px) {
     margin: 0;
     padding: 0;
@@ -32,7 +50,7 @@ const ContainerApp = styled.div`
       font-size: 90px;
       margin: 0;
     }
-  }
+  }*/
 `;
 
 const Body = styled.div`

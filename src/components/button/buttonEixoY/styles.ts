@@ -1,19 +1,18 @@
 import styled from 'styled-components'
 
 const ContainerButton = styled.div`
-  @media (max-width: 767px) {
+
+@media(min-width: 320px) and (max-width: 768px){
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     position: absolute;
-    top: 300px;
-    left: 96px;
-    gap: 20%;
+
 
     .up,
     .down {
-      background: white;
+      background: gray;
       height: 100px;
       width: 100px;
       border-radius: 50%;
@@ -28,6 +27,7 @@ const ContainerButton = styled.div`
       }
     }
 
+    // dentro dos botões
     .arr-div {
       position: absolute;
       height: 30px;
@@ -43,7 +43,45 @@ const ContainerButton = styled.div`
     .down {
       transform: rotate(220deg);
     }
-  }
+
+}
+
+@media(min-width: 320px) and (max-width: 374px){
+    top: 260px;
+    padding: 2px;
+    left: 150px;
+    gap: 40px;
+
+    .up,
+    .down {
+      background: blue;
+    }
+}
+
+@media(min-width: 375px) and (max-width: 575px){
+  top: 260px;
+    padding: 2px;
+    left: 171px;
+    gap: 40px;
+
+    .up,
+    .down {
+      background: green;
+    }
+}
+
+@media(min-width: 576px) and (max-width: 768px){
+  top: 260px;
+    padding: 2px;
+    left: 171px;
+    gap: 40px;
+
+    .up,
+    .down {
+      background: orange;
+    }
+}
+
 `
 
 export { ContainerButton }

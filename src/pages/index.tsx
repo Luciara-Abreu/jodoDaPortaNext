@@ -10,22 +10,17 @@ import useWindowDimensions from '@/hook/useWindowsDimension'
 
 export default function Home() {
   const isSmallScreen = useScreenSize()
-  const sizeScreen = useWindowDimensions()
+  const { width, height } = useWindowDimensions()
 
   const { buttonLeft, buttonRight, buttonDown, buttonUp, handlePositionUpdateX, handlePositionUpdateY } = useButtonPositions()
 
   // eslint-disable-next-line no-console
-  console.log('isSmallScreen? width, height', isSmallScreen, sizeScreen.width, sizeScreen.height)
-
-  const size = {
-    width: `${sizeScreen.width}px`,
-    height: `${sizeScreen.height}px`,
-  }
+  console.log('isSmallScreen? width, height', isSmallScreen, width, height)
 
   return (
-    <>
+    <div className='page'>
       {isSmallScreen ? (
-        <ContainerApp style={size}>
+        <ContainerApp className='container-page'>
           <Body>
             <Tabuleiro buttonLeft={buttonLeft} buttonRight={buttonRight} buttonDown={buttonDown} buttonUp={buttonUp} />
             <div className="button-hero">
@@ -47,7 +42,7 @@ export default function Home() {
           <Footer />
         </ContainerApp>
       )}
-    </>
+    </div>
   )
 }
 
