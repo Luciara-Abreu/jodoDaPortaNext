@@ -59,9 +59,9 @@ const ContainerButton = styled.div`
 
 @media(min-width: 375px) and (max-width: 575px){
   top: 260px;
-    padding: 2px;
-    left: 171px;
-    gap: 40px;
+  padding: 2px;
+  left: 171px;
+  gap: 40px;
 
     .up,
     .down {
@@ -70,10 +70,10 @@ const ContainerButton = styled.div`
 }
 
 @media(min-width: 576px) and (max-width: 768px){
-  top: 260px;
+  top: 130px;
     padding: 2px;
     left: 171px;
-    gap: 40px;
+    gap: 0px;
 
     .up,
     .down {

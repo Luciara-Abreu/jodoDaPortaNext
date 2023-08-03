@@ -66,7 +66,7 @@ const ContainerButton = styled.div`
   }
 
  @media(min-width: 576px) and (max-width: 768px){
-    top: 360px;
+    top: 200px;
     padding: 4px 4px 4px 25px;
     gap: 100px;
 

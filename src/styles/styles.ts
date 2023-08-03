@@ -17,29 +17,12 @@ const ContainerApp = styled.div`
     color: #fff;
     font-size: 70px;
     margin: 0;
-  }
+  } 
 
-  @media (max-width: 768px) {
-    margin: 0;
-    padding: 0;
-    width: 260%;
-    height: 242.5vh;    
-    background: #282c34;
 
-    > h1 {
-      color: #fff;
-      padding-top: 6%;
-      font-size: 90px;
-      margin: 0;
-    }
-  }
-
-  //575px
-  @media(min-width: 320px) and (max-width: 576px){
-    margin: 0;
-    padding: 0;
-    width: 340%;
-    height: 340vh;    
+  @media(min-width: 320px) and (max-width: 374px){
+    width: 330%;
+    height: 330vh;    
     background: pink;
 
     > h1 {
@@ -50,24 +33,21 @@ const ContainerApp = styled.div`
     }
   }
 
+  @media(min-width: 375px) and (max-width: 575px){
+    width: 280%;
+    height: 280vh;    
+    background: gray;
+  }
   
-/*
-  @media (max-width: 767px) {
-    margin: 0;
-    padding: 0;
-    width: 260%;
-    height: 242.5vh;    
-    background: #282c34;
-
-    > h1 {
-      color: #fff;
-      padding-top: 6%;
-      font-size: 90px;
-      margin: 0;
-    }
-  }*/
+  @media(min-width: 576px) and (max-width: 768px){
+    width: 180%;
+    height: 210vh;    
+    background: purple;
+  }
 `;
 
+
+//---------------------------------------------------
 const Body = styled.div`
   width: 100%;
   height: 155vh;
@@ -82,7 +62,7 @@ const Body = styled.div`
     transform: translateX(-50%); /* Centraliza horizontalmente */
   }
 
-  @media (max-width: 767px) {
+  @media (max-width: 768px) {
     display: flex;
     width: 100%;
     height: 100%;
@@ -98,6 +78,17 @@ const Body = styled.div`
       transform: translateX(-50%); /* Centraliza horizontalmente */
     }
   }
+
+  @media(min-width: 320px) and (max-width: 374px){
+    display: flex;
+    width: 0%;
+    height: 70vh;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+  }
+
 `;
 
 /* -----------------------------------------------------------------------*/
