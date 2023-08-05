@@ -1,11 +1,8 @@
 import styled from "styled-components";
 
-
 const ContainerApp = styled.div`
   width: 100%;
   height: 100vh;
-  margin: 0;
-  padding: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -15,66 +12,22 @@ const ContainerApp = styled.div`
 
   > h1 {
     color: #fff;
-    font-size: 70px;
+    font-size: 5vw; /* Usando unidade 'vw' para tornar a fonte responsiva */
     margin: 0;
   } 
 
-
-  @media(min-width: 320px) and (max-width: 374px){
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-
-    width: 340%;
-    height: 340vh;    
-    background: pink;
-
+  @media (max-width: 768px) {
+    width: 330vw;
+    height: 320vh;
     > h1 {
-      color: #fff;
-      padding-top: 6%;
-      font-size: 90px;
-      margin: 0;
+      font-size: 8vw; /* Ajustando o tamanho da fonte para telas menores */
     }
-  }
-
-  @media(min-width: 375px) and (max-width: 575px){
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-
-    width: 280%;
-    height: 280vh;    
-    background: gray;
-  }
-  
-  @media(min-width: 576px) and (max-width: 768px){
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-
-    width: 180%;
-    height: 210vh;    
-    background: purple;
   }
 `;
 
-
-//---------------------------------------------------
 const Body = styled.div`
   width: 100%;
-  height: 155vh;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -82,28 +35,17 @@ const Body = styled.div`
 
   .button-hero {
     position: absolute;
-    left: 0%; /* Alinha horizontalmente ao centro */
-    transform: translateX(-50%); /* Centraliza horizontalmente */
+    top: 60%;
+    left: 50%;
+    transform: translateX(-50%);
   }
 
-  @media (min-width: 320px) and (max-width: 768px) {
-    display: flex;
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    justify-content: center;
-    align-items: center;
-
+  @media (max-width: 768px) {
     .button-hero {
-      position: absolute;
-      top: 60%;
-      left: 30%; /* Alinha horizontalmente ao centro */
-      transform: translateX(-50%); /* Centraliza horizontalmente */
+      top: 30%;
+      left: 30%;
     }
   }
 `;
-
-/* -----------------------------------------------------------------------*/
 
 export { ContainerApp, Body };
