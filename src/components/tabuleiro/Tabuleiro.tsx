@@ -78,6 +78,14 @@ const Tabuleiro: React.FC<IHeroProps> = ({ buttonLeft, buttonRight, buttonDown, 
       <Trap key="trap30" initialPosition={isSmallScreen ? { y: 13, x: 15 } :  { y: 13, x: 15 }} text={0} />
       <Trap key="trap31" initialPosition={isSmallScreen ? { y: 10, x: 16 } : { y: 10, x: 16 }} text={0} />
   
+
+      <MiniDemon key="miniDemon1" initialPosition={{ y: 14, x: 15 }} text={0} />
+      <MiniDemon key="miniDemon2" initialPosition={{ y: 9, x: 9 }} text={0} />
+      <MiniDemon key="miniDemon3" initialPosition={{ y: 4, x: 16 }} text={0} />
+      <MiniDemon key="miniDemon4" initialPosition={{ y: 17, x: 5 }} text={0} />
+      <MiniDemon key="miniDemon5" initialPosition={{ y: 5, x: 2 }} text={0} />
+      <Demon key="demon" initialPosition={{ y: 3, x: 10 }} text={0} />
+
       <Debugger key="debugger" initialPosition={{ x: 100, y: 0 }} text={0} />
     </TabuleiroContainer>
   )
@@ -85,12 +93,6 @@ const Tabuleiro: React.FC<IHeroProps> = ({ buttonLeft, buttonRight, buttonDown, 
 export default Tabuleiro
 
 /**
-    <MiniDemon key="miniDemon1" initialPosition={{ y: 14, x: 15 }} text={0} />
-      <MiniDemon key="miniDemon2" initialPosition={{ y: 9, x: 9 }} text={0} />
-      <MiniDemon key="miniDemon3" initialPosition={{ y: 4, x: 16 }} text={0} />
-      <MiniDemon key="miniDemon4" initialPosition={{ y: 17, x: 5 }} text={0} />
-      <MiniDemon key="miniDemon5" initialPosition={{ y: 5, x: 2 }} text={0} />
-      <Demon key="demon" initialPosition={{ y: 3, x: 10 }} text={0} />
 
       
  */
