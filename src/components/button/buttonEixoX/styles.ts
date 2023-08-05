@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 
 const ContainerButton = styled.div`
+
 @media(max-width: 768px){
     display: flex;
     justify-content: center;
@@ -43,7 +44,7 @@ const ContainerButton = styled.div`
     }
   }
 
-  @media(min-width: 93px) and (max-width: 374px){
+  @media(min-width: 0px) and (max-width: 374px){
     top: 360px;
     padding: 4px;
     gap: 100px;

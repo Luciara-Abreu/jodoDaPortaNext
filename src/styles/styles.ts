@@ -20,7 +20,7 @@ const ContainerApp = styled.div`
   } 
 
 
-  @media(min-width: 93px) and (max-width: 374px){
+  @media(min-width: 0px) and (max-width: 374px){
     width: 460%;
     height: 400vh;    
     background: pink;
