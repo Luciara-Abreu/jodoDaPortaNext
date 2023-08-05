@@ -8,6 +8,7 @@ function Tile(props: IProps) {
   const color = UseTileCollor(props);
   const isSmallScreen = useScreenSize()
 
+
   const styleBigScreen = {
     left: `${props.initialPosition.x * TILE_SIZE}px`,
     top: `${props.initialPosition.y * TILE_BIG_SIZE}px`,
@@ -27,7 +28,7 @@ function Tile(props: IProps) {
   };
 
 
-  return <ContainerTile style={isSmallScreen ? styleSmallScreen : styleBigScreen}>{props.text}</ContainerTile>;
+  return <ContainerTile className= 'container-tile' style={isSmallScreen ? styleSmallScreen : styleBigScreen}>{props.text}</ContainerTile>;
 }
 
 export default Tile;

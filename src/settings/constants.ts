@@ -2,7 +2,9 @@ export const TILE_SIZE: any = 48;
 export const GAME_SIZE: any = 20 * TILE_SIZE; //960PX
 
 export const TILE_BIG_SIZE: any = 30.5;
-export const GAME_BIG_SIZE: any = 20 * TILE_BIG_SIZE; //610PX
+export const TILE_SMALL_SIZE: any = TILE_SIZE * 22;
+export const GAME_BIG_SIZE_HEIGHT: any = 20 * TILE_BIG_SIZE; //610PX
+export const GAME_BIG_SIZE_WIDHT: any = 20 * TILE_BIG_SIZE; //610PX
 //***********************************************************/
 
 //Eixo X = hotizontal

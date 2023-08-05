@@ -1,4 +1,3 @@
-import { GAME_BIG_SIZE, GAME_SIZE } from "@/settings/constants";
 import styled from "styled-components";
 
 const TabuleiroContainer = styled.div`
@@ -8,22 +7,12 @@ const TabuleiroContainer = styled.div`
   align-items: center;
   top: 0px;
 
-  .image-tabuleiro {
-    width: ${GAME_SIZE}px;
-    height: ${GAME_BIG_SIZE}px;
-  }
-
   @media (max-width: 767px) {
     position: absolute;
     display: flex;
     justify-content: center;
     align-items: center;
-    top: 20%;
-
-    .image-tabuleiro {
-    width: ${GAME_SIZE}px;
-    height: ${GAME_SIZE}px;
-  }
+    top: 20%; 
   }
 `;
 
