@@ -11,6 +11,8 @@ const Trap = (props: IProps) => {
   const bigScreen = {
     top: `${props.initialPosition.y * TILE_BIG_SIZE}px`,
     left:`${props.initialPosition.x * TILE_BIG_SIZE}px`,
+    width: `${40}px`,
+    height: `${34}px`,
   };
 
   const smallScreen = {
