@@ -6,7 +6,7 @@ const ContainerButton = styled.div`
   align-items: center;
   flex-direction: column;
   position: absolute;
-  top: 300vw;
+  top: 250vw;
   left: 50vw;
   gap: 30vw;
 

@@ -17,7 +17,7 @@ const ContainerApp = styled.div`
   } 
 
   @media (max-width: 768px) {
-    width: 330vw;
+    width: 320vw;
     height: 320vh;
     > h1 {
       font-size: 8vw; /* Ajustando o tamanho da fonte para telas menores */

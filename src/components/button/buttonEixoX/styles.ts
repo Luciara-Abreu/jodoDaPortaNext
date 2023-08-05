@@ -6,8 +6,8 @@ const ContainerButton = styled.div`
   align-items: center;
   flex-direction: row;
   position: absolute;
-  top: 330vw;
-  left: -10vw;
+  top: 284vw;
+  left: 12vw;
   gap: 30vw;
 
   .right,
@@ -29,8 +29,11 @@ const ContainerButton = styled.div`
 
   /* Estilos para dispositivos com largura menor ou igual a 768px (telas menores) */
   @media (max-width: 768px) {
-    flex-direction: row;
-    position: absolute;
+    .right,
+    .left {
+      top: 150%;
+      margin: 20px; /* Reduzindo a margem para tamanhos menores */
+    }
 
     /* Estilos para a seta dentro dos botões */
     .arr-div {
@@ -49,43 +52,6 @@ const ContainerButton = styled.div`
 
     .left {
       transform: rotate(128deg);
-    }
-
-    /* Estilos para cada tamanho específico de tela menor */
-    @media (min-width: 320px) and (max-width: 374px) {
-      top: 360px;
-      padding: 4px;
-      gap: 100px;
-      .right,
-      .left {
-        background: blue;
-        height: 70px;
-        width: 70px;
-      }
-    }
-
-    @media (min-width: 375px) and (max-width: 575px) {
-      top: 370px;
-      padding: 4px 4px 4px 25px;
-      gap: 100px;
-      .right,
-      .left {
-        background: green;
-        height: 70px;
-        width: 70px;
-      }
-    }
-
-    @media (min-width: 576px) and (max-width: 768px) {
-      top: 200px;
-      padding: 4px 4px 4px 25px;
-      gap: 100px;
-      .right,
-      .left {
-        background: orange;
-        height: 70px;
-        width: 70px;
-      }
     }
   }
 `;
