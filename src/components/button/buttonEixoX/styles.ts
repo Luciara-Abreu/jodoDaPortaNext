@@ -44,7 +44,7 @@ const ContainerButton = styled.div`
     }
   }
 
-  @media(min-width: 0px) and (max-width: 374px){
+  @media(min-width: 320px) and (max-width: 374px){
     top: 360px;
     padding: 4px;
     gap: 100px;
@@ -52,18 +52,23 @@ const ContainerButton = styled.div`
     .right,
     .left {
     background: blue;
+    height: 70px;
+    width: 70px;
     }
   }
 
   @media(min-width: 375px) and (max-width: 575px){
-    top: 360px;
+    top: 370px;
     padding: 4px 4px 4px 25px;
     gap: 100px;
 
     .right,
     .left {
     background: green;
+    height: 70px;
+    width: 70px;
     }
+
   }
 
  @media(min-width: 576px) and (max-width: 768px){
@@ -74,6 +79,8 @@ const ContainerButton = styled.div`
     .right,
     .left {
     background: orange;
+    height: 70px;
+    width: 70px;
     }
   }
 `

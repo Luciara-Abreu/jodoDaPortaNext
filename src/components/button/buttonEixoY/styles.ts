@@ -45,7 +45,7 @@ const ContainerButton = styled.div`
 
 }
 
-@media(min-width: 0px) and (max-width: 374px){
+@media(min-width: 320px) and (max-width: 374px){
     top: 260px;
     padding: 2px;
     left: 150px;
@@ -54,19 +54,23 @@ const ContainerButton = styled.div`
     .up,
     .down {
       background: blue;
+      height: 70px;
+      width: 70px;
     }
 }
 
 @media(min-width: 375px) and (max-width: 575px){
-  top: 260px;
+  top: 280px;
   padding: 2px;
-  left: 171px;
+  left: 160px;
   gap: 40px;
 
     .up,
     .down {
       background: green;
-    }
+      height: 70px;
+      width: 70px;
+    }    
 }
 
 @media(min-width: 576px) and (max-width: 768px){
@@ -78,6 +82,8 @@ const ContainerButton = styled.div`
     .up,
     .down {
       background: orange;
+      height: 70px;
+      width: 70px;
     }
 }
 
