@@ -9,9 +9,9 @@ export const GAME_BIG_SIZE_WIDHT: any = 20 * TILE_BIG_SIZE; //610PX
 
 //Eixo X = hotizontal
 const POSITION_RIGHT = 10; // do 3 ao  21 / do 156 ao 174
-const POSITION_LEFT = 48; // do 3 ao  21 / do 156 ao 174
+const POSITION_LEFT = 0; // do 3 ao  21 / do 156 ao 174
 const stepLeftRight = 48
-const FIM_DO_MAPA_X = 864 // horizontal / inicio 48
+const FIM_DO_MAPA_X = 912 // horizontal / inicio 48
 
 //Eixo Y = Vertical
 const POSITION_TOP = 48; //1054       // do 1 ao 17  / do 27 ao 43

@@ -3,6 +3,11 @@ import Tile from './Tale'
 import { Canvas, CanvasBigScreen } from '@/context/canvas/helpers'
 import useScreenSize from '@/hook/useScreenSize'
 
+const position = {
+  y: 0,
+  x: 0,
+}
+
 function getCanvasMap() {
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const isSmallScreen = useScreenSize()

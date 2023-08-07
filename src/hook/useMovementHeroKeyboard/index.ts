@@ -3,7 +3,7 @@ import { EDirection } from "@/settings/constants";
 
 const initialPosition = {
   y: 1,
-  x: 1,
+  x: 0,
 };
 
 function useMovementHeroKeyboard() {
@@ -14,13 +14,13 @@ function useMovementHeroKeyboard() {
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key === EDirection.LEFT) {
-        if (position.x > 1 && position.x <= 18) {
+        if (position.x >= 0 && position.x <= 19) {
           const newState = { x: position.x - 1, y: position.y };
           setPosition(newState);
           setDirection(EDirection.LEFT);
         }
       } else if (event.key === EDirection.RIGHT) {
-        if (position.x >= 1 && position.x <= 17) {
+        if (position.x >= -40 && position.x <= 18) {
           const newState = { x: position.x + 1, y: position.y };
           setPosition(newState);
           setDirection(EDirection.RIGHT);
