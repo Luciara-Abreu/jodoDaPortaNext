@@ -58,10 +58,7 @@ const Tabuleiro: React.FC<IHeroProps> = ({ buttonLeft, buttonRight, buttonDown, 
       <Trap key="trap17" initialPosition={isSmallScreen ? { y: 7, x: 8 } : { y: 5.1, x: 15.5 }} text={0} />
       <Trap key="trap18" initialPosition={isSmallScreen ? { y: 8, x: 9 } : { y: 5.1, x: 17.6 }} text={0} />
       <Trap key="trap19" initialPosition={isSmallScreen ? { y: 9, x: 10 } : { y: 6.1, x: 18.6 }} text={0} />
-      <Trap key="trap20" initialPosition={isSmallScreen ? { y: 9, x: 10 } : { y: 7.1, x: 19.6 }} text={0} />
-
-      
-
+      <Trap key="trap20" initialPosition={isSmallScreen ? { y: 9, x: 10 } : { y: 7.1, x: 19.6 }} text={0} />    
 
       <Trap key="trap24" initialPosition={isSmallScreen ? { y: 15, x: 18 } : { y: 8.1, x: 10.4 }} text={0} />
       <Trap key="trap24" initialPosition={isSmallScreen ? { y: 15, x: 18 } : { y: 9.1, x: 11.5 }} text={0} />
@@ -81,6 +78,10 @@ const Tabuleiro: React.FC<IHeroProps> = ({ buttonLeft, buttonRight, buttonDown, 
       <Trap key="trap15" initialPosition={isSmallScreen ? { y: 11, x: 8 } : { y: 14.1, x: 16.6 }} text={0} />
       <Trap key="trap20" initialPosition={isSmallScreen ? { y: 18, x: 7 } : { y: 15.1, x: 14.5 }} text={0} />
 
+      <Trap key="trap29" initialPosition={isSmallScreen ? { y: 12, x: 16 } : { y: 15.1, x: 16.6 }} text={0} />
+      <Trap key="trap30" initialPosition={isSmallScreen ? { y: 13, x: 15 } :  { y: 16.1, x: 16.5}} text={0} />
+      <Trap key="trap31" initialPosition={isSmallScreen ? { y: 10, x: 16 } : { y: 16.1, x: 15.5 }} text={0} />
+
 
       <MiniDemon key="miniDemon1" initialPosition={{ y: 14, x: 15 }} text={0} />
       <MiniDemon key="miniDemon2" initialPosition={{ y: 9, x: 9 }} text={0} />
@@ -96,12 +97,5 @@ const Tabuleiro: React.FC<IHeroProps> = ({ buttonLeft, buttonRight, buttonDown, 
 }
 export default Tabuleiro
 
-/**
-
-
-
-      <Trap key="trap29" initialPosition={isSmallScreen ? { y: 12, x: 16 } : { y: 12, x: 16 }} text={0} />
-      <Trap key="trap30" initialPosition={isSmallScreen ? { y: 13, x: 15 } :  { y: 13, x: 15 }} text={0} />
-      <Trap key="trap31" initialPosition={isSmallScreen ? { y: 10, x: 16 } : { y: 10, x: 16 }} text={0} />
-      
+/**      
  */
