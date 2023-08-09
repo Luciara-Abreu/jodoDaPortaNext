@@ -17,8 +17,7 @@ const Hero: React.FC<IHeroProps> = ({ buttonLeft, buttonRight, buttonDown, butto
   const movi = useMovementHeroKeyboard()
 
   const movimentKeyboard = {
-    //bottom: `${movi.position.y * TILE_SIZE -10}px`,
-    bottom: `${movi.position.y * TILE_SIZE + 5}px`,
+    bottom: `${movi.position.y * TILE_SIZE + 4}px`,
     left: `${movi.position.x * TILE_SIZE + 6}px`,
     transform: `scaleX(${movi.direction === EDirection.RIGHT ? 1 : -1})`,
   }

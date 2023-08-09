@@ -17,8 +17,8 @@ const Tabuleiro: React.FC<IHeroProps> = ({ buttonLeft, buttonRight, buttonDown, 
     <TabuleiroContainer>
       <Image src="/images/tileset.gif" priority={true} alt="tabuleiro do jogo" 
       width={isSmallScreen ?  GAME_SIZE:960} 
-     // height={isSmallScreen ? GAME_SIZE : GAME_BIG_SIZE_HEIGHT} className="image-tabuleiro" />
-      height={isSmallScreen ? GAME_SIZE : GAME_SIZE} className="image-tabuleiro" />
+      height={isSmallScreen ? GAME_SIZE : GAME_BIG_SIZE_HEIGHT} className="image-tabuleiro" />
+
 
       <Hero buttonLeft={buttonLeft} buttonRight={buttonRight} buttonDown={buttonDown} buttonUp={buttonUp} />
       <Chest key="chest1" initialPosition={isSmallScreen ? { y: 3, x: 5 } : { y: 3.8, x: 4.8 }} text={0} />
