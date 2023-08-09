@@ -1,5 +1,6 @@
 export const TILE_SIZE: any = 48;
 export const GAME_SIZE: any = 20 * TILE_SIZE; //960PX
+export const HEAD_OFFSET = 78;
 
 export const TILE_BIG_SIZE: any = 30.5;
 export const TILE_SMALL_SIZE: any = TILE_SIZE * 22;

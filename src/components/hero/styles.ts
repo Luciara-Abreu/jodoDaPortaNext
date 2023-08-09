@@ -1,4 +1,4 @@
-import { TILE_SIZE } from "@/settings/constants";
+import { HEAD_OFFSET, TILE_SIZE } from "@/settings/constants";
 import styled from "styled-components";
 
 const HeroImage = styled.div`
@@ -16,7 +16,7 @@ const HeroImage = styled.div`
   height: 65px;
   background-image: url(/images/hero.png);
   background-repeat: no-repeat;
-  background-position: 0 ${TILE_SIZE - 78}px;
+  background-position: 0 ${-35}px;
   animation: hero-animation 1s steps(4) infinite;
   z-index: 1; // profundidade 1 ou seja ele está com prioridade entre outros elementos
 

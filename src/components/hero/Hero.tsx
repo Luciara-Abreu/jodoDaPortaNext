@@ -3,7 +3,7 @@ import { HeroImage } from './styles'
 import useDirection from '@/hook/useDirectionHero'
 import { IHeroProps } from '@/interfaces'
 import useScreenSize from '@/hook/useScreenSize'
-import { TILE_SIZE, EDirection } from '@/settings/constants'
+import { TILE_SIZE, EDirection, HEAD_OFFSET } from '@/settings/constants'
 import useMovementHeroKeyboard from '@/hook/useMovementHeroKeyboard'
 
 const initialPosition = {
@@ -17,8 +17,9 @@ const Hero: React.FC<IHeroProps> = ({ buttonLeft, buttonRight, buttonDown, butto
   const movi = useMovementHeroKeyboard()
 
   const movimentKeyboard = {
-    bottom: `${movi.position.y * TILE_SIZE}px`,
-    left: `${movi.position.x * TILE_SIZE}px`,
+    //bottom: `${movi.position.y * TILE_SIZE -10}px`,
+    bottom: `${movi.position.y * TILE_SIZE + 5}px`,
+    left: `${movi.position.x * TILE_SIZE + 6}px`,
     transform: `scaleX(${movi.direction === EDirection.RIGHT ? 1 : -1})`,
   }
 
