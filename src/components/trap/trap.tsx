@@ -9,8 +9,8 @@ const Trap = (props: IProps) => {
   const isSmallScreen = useScreenSize()
 
   const bigScreen = {
-    top: `${props.initialPosition.y * TILE_BIG_SIZE}px`,
-    left:`${props.initialPosition.x * TILE_BIG_SIZE}px`,
+    top: `${props.initialPosition.y * 46.9}px`,
+    left:`${props.initialPosition.x * 48.3}px`,
     width: `${40}px`,
     height: `${34}px`,
   };

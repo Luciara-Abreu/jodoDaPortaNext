@@ -15,7 +15,7 @@ const TrapImage = styled.div`
   height: 36px;
   background-image: url(/images/trap.png);
   background-repeat: no-repeat;
-  animation: trap-animation 1s steps(4) infinite;
+  animation: trap-animation 2s steps(4) infinite;
 `;
 
 export { TrapImage };

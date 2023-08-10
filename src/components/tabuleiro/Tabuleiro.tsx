@@ -30,13 +30,13 @@ function getCanvasMap() {
       if (text === ECanvas.CHEST) {
         array.push(<Chest initialPosition={position}  key={keyTile} text={0} />)
       }
-     /* if (text === ECanvas.TRAP) {
+      if (text === ECanvas.TRAP) {
         array.push(<Trap initialPosition={position}  key={keyTile} text={0} />)
       }
       if (text === ECanvas.MINI_DEMON) {
         array.push(<MiniDemon  key={keyTile} initialPosition={position} text={0}/>)
       }
-      if (text === ECanvas.DEMON) {
+      /*if (text === ECanvas.DEMON) {
         array.push(<Demon  key={keyTile} initialPosition={position} text={0}/>)
       }*/
 
