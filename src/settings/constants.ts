@@ -15,10 +15,10 @@ const stepLeftRight = 48
 const FIM_DO_MAPA_X = 912 // horizontal / inicio 48
 
 //Eixo Y = Vertical
-const POSITION_TOP = 48; //1054       // do 1 ao 17  / do 27 ao 43
+const POSITION_TOP = 10; //1054       // do 1 ao 17  / do 27 ao 43
 const POSITION_UP = 10; // do 1 ao 17  / do 27 ao 43
-const stepUpDow = 49
-const FIM_DO_MAPA_Y = 848 // vertical / inicio 488
+const stepUpDow = 45
+const FIM_DO_MAPA_Y = 816 // vertical / inicio 488
 
 export {
   stepLeftRight,
@@ -38,4 +38,16 @@ export enum EDirection {
   RIGHT = "ArrowRight",
   UP = "ArrowUp",
   DOWN = "ArrowDown",
+}
+
+
+export enum ECanvas {
+  FLOOR = 0,
+  WALL = 1,
+  DOOR = 2,
+  TRAP = 3,
+  MINI_DEMON = 4,
+  DEMON = 5,
+  CHEST = 6,
+  HERO = 7
 }

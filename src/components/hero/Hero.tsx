@@ -1,28 +1,25 @@
 import React from 'react'
 import { HeroImage } from './styles'
 import useDirection from '@/hook/useDirectionHero'
-import { IHeroProps } from '@/interfaces'
+import { IHeroProps, IPropsHero } from '@/interfaces'
 import useScreenSize from '@/hook/useScreenSize'
-import { TILE_SIZE, EDirection, HEAD_OFFSET } from '@/settings/constants'
+import { TILE_SIZE, EDirection} from '@/settings/constants'
 import useMovementHeroKeyboard from '@/hook/useMovementHeroKeyboard'
+import useMovementHeroButton from '@/hook/useMovementHeroButton'
 
-const initialPosition = {
-  y: 1,
-  x: 1,
-}
-
-const Hero: React.FC<IHeroProps> = ({ buttonLeft, buttonRight, buttonDown, buttonUp }) => {
+const Hero: React.FC<IPropsHero & IHeroProps> = ({buttonLeft, buttonRight, buttonDown, buttonUp, initialPosition }) => {
   const isSmallScreen = useScreenSize()
   const transform = useDirection(buttonLeft)
-  const movi = useMovementHeroKeyboard()
+  const movi = useMovementHeroKeyboard({initialPosition})
+  const moviButton = useMovementHeroButton({initialPosition})
 
   const movimentKeyboard = {
-    bottom: `${movi.position.y * TILE_SIZE + 4}px`,
-    left: `${movi.position.x * TILE_SIZE + 6}px`,
+    top: `${TILE_SIZE * movi.position.y - 48}px`,
+    left: `${movi.position.x * TILE_SIZE + 4}px`,
     transform: `scaleX(${movi.direction === EDirection.RIGHT ? 1 : -1})`,
   }
 
-  const movimentButton = {
+   const movimentButton = {
     left: `${buttonLeft}px`,
     right: `${buttonRight}px`,
     top: `${buttonDown}px`,

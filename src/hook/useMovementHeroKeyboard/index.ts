@@ -1,20 +1,16 @@
 import { useEffect, useState } from "react";
 import { EDirection } from "@/settings/constants";
+import { IPropsHero } from "@/interfaces";
 
-const initialPosition = {
-  y: 1,
-  x: 0,
-};
 
-function useMovementHeroKeyboard() {
-  const [position, setPosition] = useState(initialPosition);
+function useMovementHeroKeyboard(props: IPropsHero) {
+  const [position, setPosition] = useState(props.initialPosition);
   const [direction, setDirection] = useState(EDirection.RIGHT);
-
 
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key === EDirection.LEFT) {
-        if (position.x >= 0 && position.x <= 19) {
+        if (position.x >= 1 && position.x <= 19) {
           const newState = { x: position.x - 1, y: position.y };
           setPosition(newState);
           setDirection(EDirection.LEFT);
@@ -25,14 +21,18 @@ function useMovementHeroKeyboard() {
           setPosition(newState);
           setDirection(EDirection.RIGHT);
         }
-      } else if (event.key === EDirection.UP) {
-        if (position.y >= 1 && position.y <= 16) {
+      } else if (event.key === EDirection.DOWN) {
+        if (position.y >= 1 && position.y <= 17) {
           const newState = { x: position.x, y: position.y + 1 };
+          // eslint-disable-next-line no-console
+          console.log('position.y DOWN', position.y)
           setPosition(newState);
         }
-      } else if (event.key === EDirection.DOWN) {
-        if (position.y > 1 && position.y <= 17) {
+      } else if (event.key === EDirection.UP) {
+        if (position.y > 2 && position.y <= 18) {
           const newState = { x: position.x, y: position.y - 1 };
+          // eslint-disable-next-line no-console
+          console.log('position.y UP', position.y)
           setPosition(newState);
         }
       }

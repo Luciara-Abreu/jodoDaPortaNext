@@ -27,3 +27,11 @@ export interface IProps {
   };
   text: number;
 }
+
+
+export interface IPropsHero {
+  initialPosition: {
+    x: number;
+    y: number;
+  }
+}
